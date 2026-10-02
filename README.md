@@ -1,6 +1,6 @@
 # game-arts
 
-Project documentation initialized on 2026-10-02. Product goals, deliverables, and technical choices are pending definition.
+AI-assisted game-art business exploration, started on 2026-10-02. Initial research is documented; the user has accepted validating a small custom-delivery offer before investing in workflow products.
 
 ## Start Here
 
@@ -18,8 +18,9 @@ Project documentation initialized on 2026-10-02. Product goals, deliverables, an
 
 ## Current State
 
-- `M1.1.1` completed: initialize the AI documentation skeleton.
-- Next: define the project goal, intended users, deliverables, scope, and acceptance criteria.
+- `M1` completed: documentation and local Git initialization.
+- `M2` completed: initial workflow/monetization research and progress record. See `context/research-notes.md` for evidence and limitations.
+- Next: select a customer segment and asset offer, then define sample/pilot acceptance criteria and costs. No paid demand or profitability has been validated.
 - Classify the project after scope is known. For complex work, define and approve the complete known milestone sequence before implementation.
 
 ## Template Provenance

@@ -12,3 +12,9 @@
 - [`M1.1.2`] Initialized Git on `main` and configured `origin` as `git@github.com:linkensphere201/game-arts.git`. This resolves the earlier absence of a local repository.
 - [`M1.1.2`] Located the global dangerous-command list and corrected its reference in `AGENTS.md`.
 - [`M1.1.2`] Prepared the initial documentation checkpoint under the standing automatic-commit authorization; no push performed.
+
+- [`M2.1.1`] Completed initial official-source research on AI workflow concepts, node-based execution, agents, and human review during the conversation.
+- [`M2.1.2`] Discussed five monetization models. The user accepted prioritizing samples and a small custom-delivery pilot before workflow productization.
+- [`M2.1.3`] Updated README, overview, research notes, milestones, active status, backlog, and decisions; recorded source links and separated evidence from unvalidated hypotheses.
+- [`M2.1.3`] Verification scope: documentation diff, local references, task-ID/status consistency, and Git whitespace checks. No implementation tests apply to this documentation-only slice.
+- [`M2.1.3`] Remaining questions: customer segment, asset category, acceptance criteria, budget, tools, pricing, and pilot design. No customer outreach, asset production, paid order, or revenue validation has occurred.
