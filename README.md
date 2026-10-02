@@ -1,6 +1,6 @@
 # game-arts
 
-AI-assisted game-art business exploration, started on 2026-10-02. Initial research is documented; the user has accepted validating a small custom-delivery offer before investing in workflow products.
+AI-assisted game-art exploration, started on 2026-10-02. Stage 1 produces a finished asset on a local GPU. Stage 2 formalizes the production process into a reusable workflow only if Stage 1 results are effective.
 
 ## Start Here
 
@@ -20,7 +20,7 @@ AI-assisted game-art business exploration, started on 2026-10-02. Initial resear
 
 - `M1` completed: documentation and local Git initialization.
 - `M2` completed: initial workflow/monetization research and progress record. See `context/research-notes.md` for evidence and limitations.
-- Next: select a customer segment and asset offer, then define sample/pilot acceptance criteria and costs. No paid demand or profitability has been validated.
+- Next: confirm the local GPU and first finished asset, then define output acceptance criteria. Paid pilots and monetization remain later topics; no production result has been validated.
 - Classify the project after scope is known. For complex work, define and approve the complete known milestone sequence before implementation.
 
 ## Template Provenance

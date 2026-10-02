@@ -18,3 +18,10 @@
 - [`M2.1.3`] Updated README, overview, research notes, milestones, active status, backlog, and decisions; recorded source links and separated evidence from unvalidated hypotheses.
 - [`M2.1.3`] Verification scope: documentation diff, local references, task-ID/status consistency, and Git whitespace checks. No implementation tests apply to this documentation-only slice.
 - [`M2.1.3`] Remaining questions: customer segment, asset category, acceptance criteria, budget, tools, pricing, and pilot design. No customer outreach, asset production, paid order, or revenue validation has occurred.
+
+- [`M2.1.4`] Recorded the user's hard requirement for local GPU execution in the overview, architecture, research, decisions, and planning records.
+- [`M2.1.4`] Kept hardware specifications and model/tool selection pending; no local runtime installation, model download, GPU inspection, or benchmark was performed.
+- [`M2.1.4`] Verification: reviewed the documentation diff, requirement/task consistency, and Git whitespace checks; this slice changes documentation only.
+- [`M2.1.5`] Incorporated the user's follow-up: Stage 1 produces a finished asset on a local GPU; Stage 2 creates a reusable workflow only if the result is effective.
+- [`M2.1.5`] Updated the project entry point and planning records; reserved `M3` and `M4` for the confirmed forward sequence without claiming detailed acceptance approval or implementation progress.
+- [`M2.1.5`] Earlier paid-pilot prioritization is retained as history and explicitly superseded for immediate work. Validation: documentation diff and whitespace checks; no runtime changes.

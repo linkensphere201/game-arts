@@ -68,3 +68,18 @@ Official pages consulted during the initial discussion on 2026-10-02; not re-fet
 - [S4: n8n - Human review for tools](https://docs.n8n.io/advanced-ai/human-in-the-loop-tools/)
 - [S5: n8n Service Partner Directory](https://experts.n8n.io/)
 - [S6: Comfy API deployment](https://support.comfy.org/articles/2703236295-comfy-api-deploy-your-comfyui-workflow-as-an-api)
+
+## Local GPU Constraint Added After Initial Research
+
+- [`M2.1.4`] The user requires the workflow to run on a local GPU. This is a selection gate for future production tools and models.
+- Earlier hosted API examples demonstrate a general monetization option only; they are not a selected implementation or a required dependency for this project.
+- Confirm target GPU/VRAM and runtime environment before recommending models. Compare candidates by local compatibility, output quality, peak memory, runtime, repeatability, and applicable commercial-use terms.
+- For local delivery economics, record GPU time, electricity and hardware allocation where applicable, plus labor and failed attempts; do not use hosted API pricing as the sole cost model.
+- Local inference is not a claim of offline capability or verified performance. These have not been tested.
+
+## Latest User Direction: Two Stages
+
+- [`M2.1.5`] Stage 1: produce a finished asset using the local GPU and judge its effectiveness.
+- Stage 2: only if Stage 1 is effective, turn the successful production process into a reusable workflow.
+- This supersedes the earlier recommendation to make a paid custom-delivery pilot the immediate next step. Paid demand and business economics remain later research topics.
+- The first asset, hardware, and effectiveness criteria are still undefined. No output quality, local performance, or business outcome has been validated.

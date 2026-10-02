@@ -4,7 +4,7 @@
 
 - Initialization and initial research/documentation slices: Simple.
 - Overall project classification: Pending scope definition.
-- Planning gate: Initial research and documentation authorized; service-first exploration direction accepted. Product implementation planning remains pending.
+- Planning gate: Initial research and documentation authorized; two-stage local-production-first direction accepted. Product implementation planning remains pending.
 
 For complex work, define the complete known milestone sequence `M1` through `Mn` and approve milestone-level acceptance targets before implementation begins. This register covers completed initialization and initial research/documentation; it is not a complete product implementation plan.
 
@@ -40,9 +40,20 @@ For complex work, define the complete known milestone sequence `M1` through `Mn`
   - [x] `M2.1.1` Research AI workflows, tools, human review, and agent distinctions.
   - [x] `M2.1.2` Review monetization models and discuss a service-first validation approach.
   - [x] `M2.1.3` Record research sources, user-accepted direction, progress, and next planning questions.
+  - [x] `M2.1.4` Record the mandatory local GPU execution constraint and pending hardware validation.
+  - [x] `M2.1.5` Record the user-confirmed stage order and supersede immediate paid-pilot prioritization.
 
 `M2` IDs were assigned when recording the completed discussion on 2026-10-02. Completion means the initial research record is complete, not that demand or profitability is proven.
 
 ## Future Planning
 
 Define subsequent milestones once the product scope is known. Preserve all completed IDs.
+
+## Confirmed Forward Sequence (Planning)
+
+| ID | Stage | Goal | Acceptance target | Status |
+|---|---|---|---|---|
+| `M3` | Stage 1: local GPU finished output | Produce a finished game-art asset on the target local GPU. | Finished output reviewed against agreed quality/use criteria; local execution and resource use recorded. Asset and thresholds pending definition. | Planning |
+| `M4` | Stage 2: reusable workflow | Formalize the effective production process. | Inputs, dependencies, parameters, human steps, and exports documented; another run confirms usable results. | Conditional on M3 effectiveness |
+
+The user confirmed the order and conditional gate. Detailed scope, task decomposition, overall complexity, and measurable acceptance thresholds remain to be defined before implementation. If M3 results are ineffective, record findings and revise the trial rather than automatically starting M4.

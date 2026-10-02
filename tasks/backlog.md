@@ -1,12 +1,22 @@
 # Backlog
 
-## Pending Planning Topics Following M2
+## Stage 1 Planning Following M2.1.5
 
-- Select a target customer segment and specific asset offer; item icons for independent developers are only a candidate.
-- Define sample specifications, style, quantity, formats, acceptance checks, delivery time, and revision limits.
-- Plan how to validate willingness to pay with a small pilot.
-- Record available tools, hardware, budget, input assets, and applicable commercial-use constraints.
-- Define per-accepted-asset time/cost tracking, including failed attempts and manual rework.
-- Classify the scoped project and assign subsequent milestone/task IDs before implementation.
+- Confirm local GPU model, VRAM, and runtime environment (`M2.1.4`).
+- Select the first finished asset; item icons remain only a candidate.
+- Define style, resolution, format, quality/usable-output acceptance criteria, and acceptable manual correction.
+- Select locally runnable tools/models and plan a representative production trial.
+- Measure peak VRAM, runtime, failed attempts, and manual editing effort.
 
-These are planning topics, not scheduled execution tasks. Customer outreach, purchases, asset production, template sales, and online-tool development have not been initiated.
+## Conditional Stage 2
+
+- If Stage 1 produces an effective result, formalize the proven steps into a reusable workflow.
+- Record inputs, model versions, parameters, manual review points, exports, and reproduction instructions; verify with another run.
+- Do not build a generalized workflow system before validating a finished output.
+
+## Later Business Questions
+
+- Revisit target buyers, pricing, paid pilots, and delivery economics after production feasibility is established.
+- Workflow templates or online services remain possible later directions, not current commitments.
+
+Detailed execution tasks and acceptance criteria remain to be planned. No production run or performance validation has occurred.
