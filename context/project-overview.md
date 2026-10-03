@@ -1,56 +1,34 @@
 # Project Overview
 
-## Basic Info
+## Goal and Status
 
-- Project name: game-arts.
-- Start date: 2026-10-02.
-- Owner: To be defined.
-- Current status: Two-stage direction confirmed: local GPU finished output first, workflow formalization only if results are effective.
+Project: game-arts. Started 2026-10-02. `M1` initialization and `M2` research are complete; `M3` implementation has not started.
 
-## Goal
+Stage 1 produces usable pixel-art game characters on the local GPU and verifies them in both Godot and Unity. Stage 2 formalizes the process into a reusable workflow only if Stage 1 is effective. Commercial validation remains later work.
 
-Stage 1: use a local GPU to produce a finished game-art asset and evaluate its practical quality. Stage 2: if the result is effective, organize the proven production steps into a reusable workflow. Commercial validation remains a later topic.
+## Confirmed Scope
 
-## Scope
+- `M2.1.4`: required inference runs locally without mandatory hosted APIs or cloud GPU rental.
+- `M2.1.5`: finished output precedes workflow productization; manual steps are acceptable in the trial.
+- `M2.2.1`: both Godot and Unity environments must be verifiable.
+- `M2.2.2`: target text-described pixel characters, for example a demon, that can be imported and used in games.
+- `M2.2.3`: current authorization is research and documentation only. No installation or production work starts in this slice.
 
-### Current Scope
+## Proposed Next Experiment
 
-- Maintain project conventions, research evidence, decisions, tasks, and work logs.
-- Record the initial research and user-accepted direction under `M2`.
+One side-view demon, 64x64 cells, four idle frames and six walk frames. A shared PNG/metadata package is adapted into native Godot and Unity animation resources and verified in standalone builds. These are recommended defaults, not approved specifications. See [architecture](architecture.md).
 
-### Candidate Next Scope
+## Hardware Evidence and Constraints
 
-- Define one finished asset and its acceptance criteria for the local GPU trial.
-- Run the first local production trial once its scope is defined; assess the result before planning workflow formalization.
-- These are pending planning items; no customer outreach, purchase, deployment, or production run has started.
+Earlier inspection reported NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB VRAM and driver 592.27. RAM, available disk and actual runtime compatibility remain unverified. No successful local inference or engine build is claimed.
 
-## Current Priorities
+Keep project files under `E:\projects\game-arts`. Follow `AGENTS.md`, use English for maintained documents and Chinese for conversation. No model/editor purchases, pricing, launch schedule or mandatory online inference have been selected. Download/setup connectivity is distinct from local inference; fully offline operation is not established.
 
-- Select the first asset category and confirm target GPU/VRAM.
-- Define finished-output acceptance criteria and local runtime/memory measurements.
-- Classify the implementation scope and establish subsequent milestones before building.
+## Remaining Choices
 
-## Constraints
+- Perspective, cell size, animation scope and style details.
+- Acceptable manual art work and total trial effort.
+- Exact engine patches, local runtime and model revisions after compatibility checks.
+- Acceptance of the proposed M3 targets before implementation; future execution is classified as complex.
 
-- Keep project files under `E:\projects\game-arts`.
-- Follow `AGENTS.md` and user-provided global safety rules.
-- Use English for AI-maintained documents and Chinese for conversation by default.
-- No technology stack, pricing, budget, or launch schedule has been selected.
-
-## Open Questions
-
-- What finished asset should Stage 1 produce, and how will its effectiveness be judged?
-- Which asset category and style should the first sample cover?
-- What inputs, hardware, tools, time, and budget are available?
-- What constitutes an accepted asset and a successful pilot?
-
-## Evidence
-
-See `context/research-notes.md` for sources, limitations, candidate models, and validation questions. The icon-set example is illustrative, not a confirmed product requirement.
-
-## Local GPU Requirement
-
-- [`M2.1.4`] Hard requirement from the user: the AI production workflow must run on a local GPU.
-- The required production path must support local model inference without mandatory hosted inference APIs or rented cloud GPUs.
-- GPU model, VRAM, available system memory, driver/backend compatibility, and acceptable runtime remain to be established before tool/model selection.
-- Local GPU execution does not by itself imply fully offline operation; network access and model-download requirements remain unspecified.
+Evidence and alternatives: [research notes](research-notes.md). No art quality, performance, market demand or profitability has been validated.

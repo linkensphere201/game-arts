@@ -20,8 +20,9 @@ AI-assisted game-art exploration, started on 2026-10-02. Stage 1 produces a fini
 
 - `M1` completed: documentation and local Git initialization.
 - `M2` completed: initial workflow/monetization research and progress record. See `context/research-notes.md` for evidence and limitations.
-- Next: confirm the local GPU and first finished asset, then define output acceptance criteria. Paid pilots and monetization remain later topics; no production result has been validated.
-- Classify the project after scope is known. For complex work, define and approve the complete known milestone sequence before implementation.
+- `M2.2` completed: researched local text-to-pixel-character production and validation in both Godot and Unity. Read [the technical proposal](context/architecture.md) and [sources](context/research-notes.md#technical-research-2026-10-03).
+- `M3` remains planning only. Proposed first output: one demon with idle/walk animations. No setup, model download, generation or engine validation has begun.
+- Future dual-engine production validation is complex. M1-M4 are the known sequence; proposed M3 specifications and acceptance targets remain to be selected before execution.
 
 ## Template Provenance
 

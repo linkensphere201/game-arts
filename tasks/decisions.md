@@ -35,3 +35,12 @@
 - Decision [`M2.1.5`]: Follow the user's two-stage sequence: first produce a finished asset on a local GPU; then, if results are effective, formalize the process into a workflow.
 - Reason: The user explicitly clarified the stage order after adding the local GPU requirement.
 - Impact: This supersedes the immediate paid-pilot ordering in `M2.1.2`. Prioritize local production feasibility and finished-output quality. Keep customer trials and monetization as later topics; no generalized workflow implementation is required in Stage 1.
+
+### 2026-10-03
+
+- Requirement [`M2.2.1`]: Validate both Godot and Unity. Neither engine alone satisfies the requested environment.
+- Requirement [`M2.2.2`]: Target text-described, engine-usable pixel-art characters such as a demon. This supersedes the icon example as the current asset direction.
+- Scope [`M2.2.3`]: Research and record technical options only; do not begin setup or asset production.
+- Recommendation [`M2.2.2`]: Begin with local SDXL/Pixel Art XL concept generation plus pixel editing and short manual animations. Direct sheets, guided frames and video are alternatives with unmeasured costs/quality.
+- Proposal [`M2.2.3`]: One side-view 64x64 character, 4-frame idle and 6-frame walk; first validate engines with calibration sprites, then import the same generated source into both. These defaults are not user-approved specifications.
+- Planning [`M3`]: Classify future dual-engine production validation as complex; M1-M4 remain the known milestone sequence. Proposed M3 acceptance and decomposition are documented, but implementation is deferred as expressly requested.

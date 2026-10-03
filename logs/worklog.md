@@ -25,3 +25,11 @@
 - [`M2.1.5`] Incorporated the user's follow-up: Stage 1 produces a finished asset on a local GPU; Stage 2 creates a reusable workflow only if the result is effective.
 - [`M2.1.5`] Updated the project entry point and planning records; reserved `M3` and `M4` for the confirmed forward sequence without claiming detailed acceptance approval or implementation progress.
 - [`M2.1.5`] Earlier paid-pilot prioritization is retained as history and explicitly superseded for immediate work. Validation: documentation diff and whitespace checks; no runtime changes.
+
+## 2026-10-03
+
+- [`M2.2.1`] Researched official Godot/Unity sprite, import and runtime documentation; proposed independent calibration scenes plus Windows builds.
+- [`M2.2.2`] Compared local SDXL/Pixel Art XL, direct sprite-sheet generation, guided frame generation and AnimateDiff alternatives. Recommended a small local-generation plus manual pixel-animation baseline, subject to actual testing.
+- [`M2.2.3`] Recorded sources, uncertainty, proposed one-character contract, dual-engine acceptance gates and M3 decomposition. Updated current scope from the earlier icon example to pixel characters.
+- [`M2.2.3`] Preserved research-only boundary: no installation, model download, asset generation or engine project creation. Runtime checks are all NOT RUN.
+- [`M2.2.3`] Documentation verification: diff/whitespace, local Markdown links and task-status consistency. Normal documentation checkpoint follows under standing authorization; no push.

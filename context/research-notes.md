@@ -83,3 +83,45 @@ Official pages consulted during the initial discussion on 2026-10-02; not re-fet
 - Stage 2: only if Stage 1 is effective, turn the successful production process into a reusable workflow.
 - This supersedes the earlier recommendation to make a paid custom-delivery pilot the immediate next step. Paid demand and business economics remain later research topics.
 - The first asset, hardware, and effectiveness criteria are still undefined. No output quality, local performance, or business outcome has been validated.
+
+## Technical Research: 2026-10-03
+
+Tasks: `M2.2.1` (dual-engine validation), `M2.2.2` (production alternatives), `M2.2.3` (proposal and evidence record). Research is complete; runtime validation has not begun.
+
+The user has clarified the asset category as pixel-art game characters, for example a demon, and now explicitly requires both Godot and Unity. This supersedes the earlier unselected icon example. The first character's exact perspective and specifications remain proposed.
+
+The recommended experiment is one character with two short animations, a common PNG/metadata package, and separate Godot/Unity fixtures. Full design, deliverable contract, alternatives, acceptance gates and unresolved choices are in [Architecture and minimum validation proposal](architecture.md).
+
+### Findings and Limits
+
+- Both engines have documented sprite-animation/import mechanisms [T1-T4]. Their existence does not prove our projects, exports or generated assets work.
+- Local generation tools and pixel-style model candidates exist [T5, T7-T9]. Pixel-style output is not automatically a transparent, aligned or coherent animation. The sprite-sheet author's instructions themselves include additional processing [T9].
+- Recommended baseline is local concept generation followed by manual pixel cleanup and short animation authoring. Guided frame generation is an optional comparison. This recommendation is an inference from integration/consistency risks, not a completed quality benchmark.
+- Earlier hardware inspection reported RTX 5060 Laptop GPU, 8151 MiB VRAM, driver 592.27. RAM, available disk, installed engines and actual model/runtime compatibility remain unknown. No production test has been run.
+- The latest consulted PyTorch release guidance changes available CUDA builds [T6]. Freeze a working ComfyUI/PyTorch combination after testing rather than assuming older installation recipes apply.
+- Local inference is mandatory. Initial downloads and Unity setup may require internet; completely offline installation has not been requested or established.
+
+### Technical Sources
+
+Primary documentation, author repositories and model cards consulted on 2026-10-03. Stable/latest URLs may change; pin exact versions when implementing. Model-card claims are author claims, not independently reproduced results.
+
+| ID | Source | Relevance |
+|---|---|---|
+| T1 | [Godot 2D sprite animation](https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html) | AnimatedSprite2D, SpriteFrames and sheet-based animation |
+| T2 | [Godot CanvasItem](https://docs.godotengine.org/en/stable/classes/class_canvasitem.html) | Nearest texture filtering |
+| T3 | [Unity 6 releases](https://unity.com/releases/unity-6) | Unity 6.3 LTS listed; candidate engine baseline |
+| T4 | [Unity 6.3 Sprite Editor](https://docs.unity3d.com/6000.3/Documentation/Manual/sprite/sprite-editor/use-editor.html) | Sprite rectangles and pivot editing |
+| T5 | [ComfyUI Portable for Windows](https://docs.comfy.org/installation/comfyui_portable_windows) | Local portable setup and dependencies |
+| T6 | [PyTorch 2.12 release](https://pytorch.org/blog/pytorch-2-12-release-blog/) | Current CUDA build and GPU compatibility considerations |
+| T7 | [SDXL base 1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | Base model candidate; standalone base and offloading options |
+| T8 | [Pixel Art XL](https://huggingface.co/nerijs/pixel-art-xl) | SDXL LoRA; author suggests nearest downscaling and no Refiner |
+| T9 | [SD PixelArt SpriteSheet Generator](https://huggingface.co/Onodofthenorth/SD_PixelArt_SpriteSheet_Generator) | Specialized candidate; documented consistency/postprocessing caveats |
+| T10 | [Comfy ControlNet](https://docs.comfy.org/tutorials/controlnet/controlnet) | Optional spatial conditioning |
+| T11 | [Comfy inpainting](https://docs.comfy.org/tutorials/basic/inpaint) | Optional localized repairs |
+| T12 | [AnimateDiff](https://github.com/guoyww/AnimateDiff) | Motion-generation alternative, deferred |
+| T13 | [Aseprite CLI](https://www.aseprite.org/docs/cli/) | PNG sheet and JSON export |
+| T14 | [Unity pixel-perfect sprite preparation](https://docs.unity.com/en-us/engine/6000.6/manual/unity2d/2d-urp/2d-pixelperfect/prep-sprites) | Point filtering and pipeline-specific package distinction; newer manual, verify against chosen patch |
+| T15 | [Pixelorama](https://github.com/Orama-Interactive/Pixelorama) | Open-source pixel-art and animation editor candidate |
+| T16 | [Godot Windows downloads](https://godotengine.org/download/windows/) | Standard editor versus .NET distribution and export setup entry point |
+
+No source establishes laptop-specific throughput, a guaranteed text-to-animation success rate, or commercial suitability of the eventual output. Those remain validation questions.

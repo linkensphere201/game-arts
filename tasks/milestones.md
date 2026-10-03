@@ -3,8 +3,8 @@
 ## Complexity
 
 - Initialization and initial research/documentation slices: Simple.
-- Overall project classification: Pending scope definition.
-- Planning gate: Initial research and documentation authorized; two-stage local-production-first direction accepted. Product implementation planning remains pending.
+- Overall project classification: Complex for the proposed local-generation and dual-engine validation scope.
+- Planning gate: Research and documentation authorized; implementation explicitly deferred. The known M1-M4 sequence is recorded; proposed M3 acceptance awaits selection.
 
 For complex work, define the complete known milestone sequence `M1` through `Mn` and approve milestone-level acceptance targets before implementation begins. This register covers completed initialization and initial research/documentation; it is not a complete product implementation plan.
 
@@ -56,4 +56,28 @@ Define subsequent milestones once the product scope is known. Preserve all compl
 | `M3` | Stage 1: local GPU finished output | Produce a finished game-art asset on the target local GPU. | Finished output reviewed against agreed quality/use criteria; local execution and resource use recorded. Asset and thresholds pending definition. | Planning |
 | `M4` | Stage 2: reusable workflow | Formalize the effective production process. | Inputs, dependencies, parameters, human steps, and exports documented; another run confirms usable results. | Conditional on M3 effectiveness |
 
-The user confirmed the order and conditional gate. Detailed scope, task decomposition, overall complexity, and measurable acceptance thresholds remain to be defined before implementation. If M3 results are ineffective, record findings and revise the trial rather than automatically starting M4.
+The user confirmed the order and conditional gate. Detailed M3 decomposition and proposed acceptance are recorded below; defaults and effort thresholds remain to be selected before implementation. If M3 results are ineffective, record findings and revise the trial rather than automatically starting M4.
+
+## M2 Technical Research Extension
+
+- [x] `M2.2` Research the minimum local-production and dual-engine experiment.
+  - [x] `M2.2.1` Collect Godot and Unity environment/import/build validation options.
+  - [x] `M2.2.2` Compare text-to-pixel-character production routes and local candidates.
+  - [x] `M2.2.3` Record sources, proposed asset contract, acceptance gates and execution boundaries.
+
+## M3 Proposed Decomposition (Not Started)
+
+Future implementation is complex. The known sequence remains M1 initialization -> M2 research -> M3 usable local output -> conditional M4 workflow formalization. Research authorization does not authorize execution; proposed M3 defaults and acceptance targets await selection before implementation.
+
+- [ ] `M3.1` Establish independent, verifiable environments.
+  - [ ] `M3.1.1` Inventory hardware/software and validate local GPU inference.
+  - [ ] `M3.1.2` Validate Godot calibration scene and Windows export.
+  - [ ] `M3.1.3` Validate Unity calibration scene and Windows build.
+- [ ] `M3.2` Produce one usable character package.
+  - [ ] `M3.2.1` Generate and approve a canonical pixel character.
+  - [ ] `M3.2.2` Author short animations and export the common asset contract.
+- [ ] `M3.3` Validate delivery and effectiveness.
+  - [ ] `M3.3.1` Verify fresh imports and runnable builds in both engines.
+  - [ ] `M3.3.2` Review quality, measured effort and the go/revise/stop decision.
+
+Detailed proposed acceptance: [Architecture](../context/architecture.md#planned-gates-and-evidence). All execution checks are NOT RUN. M4 remains conditional; no generalized workflow is authorized by this research request.
