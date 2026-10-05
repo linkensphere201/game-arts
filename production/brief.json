@@ -1,0 +1,48 @@
+{
+  "id": "ember-imp",
+  "title": "Ember Imp",
+  "description": "An original small red demon for a side-view pixel game, ivory horns, amber eyes, charcoal loincloth, clawed feet, curled pointed tail; mischievous and readable, no weapon, no text.",
+  "view": "right-facing three-quarter side view",
+  "cell": [
+    64,
+    64
+  ],
+  "anchor_top_left": [
+    32,
+    56
+  ],
+  "palette_limit": 32,
+  "alpha": "binary",
+  "animations": {
+    "idle": {
+      "frames": 4,
+      "fps": 8,
+      "loop": true
+    },
+    "walk": {
+      "frames": 6,
+      "fps": 8,
+      "loop": true
+    }
+  },
+  "generation": {
+    "local_gpu_required": true,
+    "model": "Lykon/DreamShaper (DreamShaper_8_pruned.safetensors)",
+    "lora": null,
+    "batch_size": 1,
+    "candidate_limit": 8,
+    "positive_prompt": "pixel art, full body small red demon imp character, three quarter side view facing right, two ivory horns, amber eyes, charcoal loincloth, clawed feet, thin curled pointed tail, mischievous expression, large head, compact body, arms separated from body, two separate legs, standing neutral pose, centered single character, entire body visible, flat limited colors, bold dark outline, clean readable silhouette, retro 16 bit game sprite, plain pure white background",
+    "negative_prompt": "photograph, realistic, 3d render, blurry, gradient background, scenery, floor, shadow, text, watermark, logo, border, cropped, multiple characters, sprite sheet, extra limbs, weapon"
+  },
+  "acceptance": [
+    "Readable at 1x",
+    "Actual transparent background",
+    "Stable character identity and frame origin",
+    "No unintended clipping",
+    "Looping idle and walk",
+    "Reusable Godot scene works after copying into a fresh project"
+  ],
+  "notes": "Implementation defaults for the authorized Godot MVP; subject to visual adjustment. Human/art-directed cleanup and helper scripts must be recorded.",
+  "selected_seed": 420052,
+  "final_art_notes": "Large curved horns with ivory interior highlights; three-quarter ready stance. Tail detail is not distinct at 64x64. Legs are art-directed pixel redraws; animation is a local cutout treatment, not AI-generated frame sequences."
+}

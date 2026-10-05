@@ -1,30 +1,49 @@
 # game-arts
 
-AI-assisted game-art exploration, started on 2026-10-02. Stage 1 produces a finished asset on a local GPU. Stage 2 formalizes the production process into a reusable workflow only if Stage 1 results are effective.
+## Remote repository: code and documentation only
 
-## Start Here
+The user requested source-only publication on 2026-10-05. Generated art resources, Blender files, GLBs, Godot scene/resource outputs, screenshots, validation data/logs, archives, executable builds, model weights and local tools remain local. This supersedes earlier statements that finished art or demo scenes are tracked for remote delivery. Artifact links below describe local deliverables and may not resolve in a fresh clone.
 
-1. Read `AGENTS.md` for project conventions and safety rules.
-2. Read `context/project-overview.md` for scope and open questions.
-3. Read `tasks/milestones.md` and `tasks/active.md` for progress and next steps.
-4. Record decisions in `tasks/decisions.md` and completed work in `logs/worklog.md`.
+A fresh clone is not immediately runnable: generate the Blender/GLB assets and Godot scenes using the authoring instructions in `scene-demo/README.md` first. Code, shaders, project/export configuration, authored production specifications and documentation are retained.
 
-## Documentation Structure
+Publication uses `codex/source-only`, based on the previously published remote `main`, so the original resource-bearing local commits are not its ancestors. The original local `main` and its resources are preserved. For subsequent publication, work from the source-only lineage; do not merge or push the resource-bearing local history. Resource ignore rules do not remove files already present in old commits.
 
-- `context/`: stable background, architecture, glossary, and research notes.
-- `tasks/`: milestones, active tasks, backlog, and decisions.
-- `prompts/`: reusable prompts.
-- `logs/`: chronological implementation and verification records.
 
-## Current State
+Godot-first sprite MVP delivered on 2026-10-04: text prompt -> local GPU character draft -> art-directed pixel cleanup and animation -> reusable Godot resource -> importing demo and Windows build.
 
-- `M1` completed: documentation and local Git initialization.
-- `M2` completed: initial workflow/monetization research and progress record. See `context/research-notes.md` for evidence and limitations.
-- `M2.2` completed: researched local text-to-pixel-character production and validation in both Godot and Unity. Read [the technical proposal](context/architecture.md) and [sources](context/research-notes.md#technical-research-2026-10-03).
-- `M3` remains planning only. Proposed first output: one demon with idle/walk animations. No setup, model download, generation or engine validation has begun.
-- Future dual-engine production validation is complex. M1-M4 are the known sequence; proposed M3 specifications and acceptance targets remain to be selected before execution.
+## Open the Result
 
-## Template Provenance
+| Deliverable | Location |
+|---|---|
+| Reusable asset and import instructions | [assets/ember-imp](assets/ember-imp/README.md) |
+| Godot demo project | [demo/project.godot](demo/project.godot) |
+| Demo controls | [demo/README.md](demo/README.md) |
+| Actual Godot screenshot | [validation/godot-demo.png](validation/godot-demo.png) |
+| Animated sprite preview | [validation/sprite-preview.gif](validation/sprite-preview.gif) |
+| Local Windows executable | `builds/ember-imp-demo.exe` |
+| Local asset ZIP | `builds/ember-imp-godot.zip` |
+| Local demo-source ZIP | `builds/ember-imp-demo-source.zip` |
 
-Adapted from `E:\projects\project-manager\project-template` on 2026-10-02.
-The existing `game-arts` directory is the project root; no dated wrapper directory is required.
+Open the project with Godot 4.7.2, or run the Windows executable. The completed asset and demo do not need Python, ComfyUI or model files. ZIPs/builds are local ignored outputs; tracked sources can recreate them.
+
+## Result and Limits
+
+- 64x64 character, 4 idle frames and 6 walk frames, 8 FPS, binary alpha and 23 shared opaque colors.
+- DreamShaper 8 generated the selected draft on the RTX 5060 Laptop GPU. SDXL trials failed in this machine's memory configuration and are recorded, not counted as successes.
+- Animation uses art-directed pixel leg redraws and cutout motion. This is a single-character technical MVP, not proven general text-to-animation automation or a commercially polished pack.
+- Fresh-project import, demo controls, a 60-second Windows run and one pixel-identical local generation replay passed. See [validation](validation/README.md).
+- Unity is deferred. Stage 2 workflow productization remains conditional on output quality and acceptable effort.
+
+## Documentation and Local Resources
+
+Read [AGENTS.md](AGENTS.md) for conventions, [active status](tasks/active.md) and [milestones](tasks/milestones.md) for progress, and [production record](production/README.md) for prompts, model provenance, commands, failures and [exact resource locations](production/README.md#local-resource-locations).
+
+All project-managed downloaded archives, model weights, portable tools and logs live under `E:\projects\game-arts\.local\`, ignored by Git. They are not system-wide installations. Nothing is automatically pushed.
+
+## Provenance
+
+Project started 2026-10-02. Documentation was adapted from `E:\projects\project-manager\project-template`. M1 initialized documentation/Git; M2 recorded research; M3 delivers the Godot MVP. Earlier decisions remain in [the decision log](tasks/decisions.md).
+
+## 3D scene
+
+The new [Sunward Coast demo](scene-demo/README.md) is a compact 40 x 36 m outdoor scene with grass, sunshine and coast. Open `scene-demo/project.godot` in Godot 4.7.2. Editable Blender sources are under `art-source/environment/`; Blender 4.5.14 portable is in `.local/blender/blender-4.5.14-windows-x64/`. Scene delivery validation is tracked separately from the earlier sprite MVP.

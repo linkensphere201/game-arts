@@ -1,0 +1,15 @@
+{
+  "repo": "nerijs/pixel-art-xl",
+  "file": "pixel-art-xl.safetensors",
+  "revision": "8bf4a4d9ea283e00a51fafda8e0539f8248ea037",
+  "metadata": {
+    "rfilename": "pixel-art-xl.safetensors",
+    "blobId": "fe5524890cd0a7390ec1ff835788be4e6a3304db",
+    "size": 170543052,
+    "lfs": {
+      "sha256": "4234637cb80c998f41e348e6a6cb6bc20d8d038b2b0f256b6129b3b5e353eef7",
+      "size": 170543052,
+      "pointerSize": 134
+    }
+  }
+}

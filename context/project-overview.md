@@ -1,34 +1,35 @@
 # Project Overview
 
-## Goal and Status
+Project: game-arts. Started 2026-10-02. Godot-first technical MVP delivered 2026-10-04.
 
-Project: game-arts. Started 2026-10-02. `M1` initialization and `M2` research are complete; `M3` implementation has not started.
+## Goal and Confirmed Sequence
 
-Stage 1 produces usable pixel-art game characters on the local GPU and verifies them in both Godot and Unity. Stage 2 formalizes the process into a reusable workflow only if Stage 1 is effective. Commercial validation remains later work.
+Stage 1 produces usable game art on a local GPU. Stage 2 formalizes a reusable workflow only after effective output is demonstrated. The user initially requested both Godot and Unity, then explicitly prioritized Godot for the first MVP; Unity is deferred.
 
-## Confirmed Scope
+## Current Result
 
-- `M2.1.4`: required inference runs locally without mandatory hosted APIs or cloud GPU rental.
-- `M2.1.5`: finished output precedes workflow productization; manual steps are acceptable in the trial.
-- `M2.2.1`: both Godot and Unity environments must be verifiable.
-- `M2.2.2`: target text-described pixel characters, for example a demon, that can be imported and used in games.
-- `M2.2.3`: current authorization is research and documentation only. No installation or production work starts in this slice.
+One 64x64 demon sprite with idle and walk animations, a portable Godot resource folder, a demo that actually imports it, and a tested Windows executable. The selected concept was generated locally using DreamShaper 8. Pixel cleanup and animation were art-directed local processing, not AI-generated coherent animation frames.
 
-## Proposed Next Experiment
+Fresh import into a differently named nested folder, demo controls and a 60-second standalone run passed. One selected-prompt replay produced identical RGB pixels in the same runtime. See [validation](../validation/README.md).
 
-One side-view demon, 64x64 cells, four idle frames and six walk frames. A shared PNG/metadata package is adapted into native Godot and Unity animation resources and verified in standalone builds. These are recommended defaults, not approved specifications. See [architecture](architecture.md).
+## Hardware and Practical Findings
 
-## Hardware Evidence and Constraints
+RTX 5060 Laptop GPU, 8151 MiB VRAM, driver 592.27; approximately 31.64 GiB RAM and no configured swap reported during inspection. SDXL attempts failed under the tested loading configurations. DreamShaper 8 at 512x512 succeeded with conservative ComfyUI memory flags; sampled total GPU memory reached 3248 MiB. This does not prove all models or future workloads fit.
 
-Earlier inspection reported NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB VRAM and driver 592.27. RAM, available disk and actual runtime compatibility remain unverified. No successful local inference or engine build is claimed.
+## Scope and Remaining Decisions
 
-Keep project files under `E:\projects\game-arts`. Follow `AGENTS.md`, use English for maintained documents and Chinese for conversation. No model/editor purchases, pricing, launch schedule or mandatory online inference have been selected. Download/setup connectivity is distinct from local inference; fully offline operation is not established.
+- The local inference requirement is satisfied for this specific production run.
+- Finished resources run independently of generation tools.
+- Visual quality is prototype-level; user art acceptance, commercial terms and buyer demand are not established.
+- General text-to-animation automation, additional views/actions, Unity and workflow productization remain future work.
+- Follow `AGENTS.md`; English maintained docs, Chinese conversation. Local runtime/download storage remains under project `.local/`, excluded from Git. No automatic push.
 
-## Remaining Choices
+See [production record](../production/README.md), [research history](research-notes.md), and [active status](../tasks/active.md).
 
-- Perspective, cell size, animation scope and style details.
-- Acceptable manual art work and total trial effort.
-- Exact engine patches, local runtime and model revisions after compatibility checks.
-- Acceptance of the proposed M3 targets before implementation; future execution is classified as complex.
+## Confirmed Production Route (2026-10-05, M2.3.3)
 
-Evidence and alternatives: [research notes](research-notes.md). No art quality, performance, market demand or profitability has been validated.
+AI-assisted production is the accepted direction: AI references and script assistance -> editable Blender models/materials/rigs/animations -> Godot integration and validation -> human quality acceptance. Keep intermediate artifacts editable and each step independently reviewable. Direct AI 3D generation is an optional bounded tool, not the default complete production process. Local generative-art inference and the two-stage output-before-workflow sequence remain in force. The first 3D asset/slice, style and acceptance criteria remain to be selected; the earlier room/chest/demon examples are proposals.
+
+## Current 3D scene (M3.4)
+
+The first 3D environment is a compact 40 x 36 m sunny coastal meadow, authorized on 2026-10-05. See [scene demo](../scene-demo/README.md). Blender 4.5.14 LTS portable is installed inside `.local/blender/`; the scene has editable Blender source, explicit GLB exports and native Godot resources. AI-assisted offline construction is used; no 3D generative model is required. Scene assets precede characters.

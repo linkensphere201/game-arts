@@ -1,0 +1,131 @@
+{
+  "method": "Art-directed cutout upper body with hand-authored pixel legs; not generated animation",
+  "fps": 8,
+  "poses": {
+    "idle": [
+      {
+        "rear": [
+          24,
+          52
+        ],
+        "front": [
+          35,
+          52
+        ],
+        "bob": 0,
+        "sway": 0
+      },
+      {
+        "rear": [
+          24,
+          52
+        ],
+        "front": [
+          35,
+          52
+        ],
+        "bob": -1,
+        "sway": 0
+      },
+      {
+        "rear": [
+          24,
+          52
+        ],
+        "front": [
+          35,
+          52
+        ],
+        "bob": -1,
+        "sway": 0,
+        "blink": true
+      },
+      {
+        "rear": [
+          24,
+          52
+        ],
+        "front": [
+          35,
+          52
+        ],
+        "bob": 0,
+        "sway": 0
+      }
+    ],
+    "walk": [
+      {
+        "rear": [
+          23,
+          52
+        ],
+        "front": [
+          37,
+          52
+        ],
+        "bob": 0,
+        "sway": 0
+      },
+      {
+        "rear": [
+          27,
+          50
+        ],
+        "front": [
+          32,
+          52
+        ],
+        "bob": -1,
+        "sway": 0
+      },
+      {
+        "rear": [
+          32,
+          49
+        ],
+        "front": [
+          27,
+          52
+        ],
+        "bob": 0,
+        "sway": 1
+      },
+      {
+        "rear": [
+          37,
+          52
+        ],
+        "front": [
+          23,
+          52
+        ],
+        "bob": 0,
+        "sway": 0
+      },
+      {
+        "rear": [
+          32,
+          52
+        ],
+        "front": [
+          27,
+          50
+        ],
+        "bob": -1,
+        "sway": 0
+      },
+      {
+        "rear": [
+          27,
+          52
+        ],
+        "front": [
+          32,
+          49
+        ],
+        "bob": 0,
+        "sway": -1
+      }
+    ]
+  }
+}

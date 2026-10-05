@@ -1,0 +1,15 @@
+{
+  "revision": "228d79cb20811466f5c5710aa91f05dabd0b8a14",
+  "metadata": {
+    "rfilename": "DreamShaper_8_pruned.safetensors",
+    "blobId": "37ef9090a5180e3f44097c88c55d8aa90f394454",
+    "size": 2132625894,
+    "lfs": {
+      "sha256": "879db523c30d3b9017143d56705015e15a2cb5628762c11d086fed9538abd7fd",
+      "size": 2132625894,
+      "pointerSize": 135
+    }
+  },
+  "file": "DreamShaper_8_pruned.safetensors",
+  "repo": "Lykon/DreamShaper"
+}
