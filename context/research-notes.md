@@ -249,3 +249,11 @@ Deliver editable .blend sources (or parameter scripts plus editable outputs), GL
 - [Kenney support and asset terms](https://kenney.nl/support): candidate fixture assets; retain the selected pack's own license record.
 
 No tools or asset packs were installed or downloaded for this research. No local 3D generation, Blender export or Godot 3D performance benchmark has yet been performed.
+
+## 2026-10-07: Poster/cover side task — poster-cover/M1.1.1-M1.1.3
+
+Research and model comparisons are maintained in [the side-task research record](../side-tasks/2026-10-07-poster-cover/context/research-notes.md). Recommend existing SDXL-family backgrounds plus separate SVG/JSON typography and transparent text exports. New instruction-editing candidate: FLUX.2 klein4B, whose official approximately13GBVRAM guidance does not establish feasibility on this8GBdevice. AnyText2 is an optional raster-lettering tool; Qwen20B editing/decomposition candidates are deferred. Distinguish reference guidance from exact preservation, and RGBA layers from editable text. No downloads or inference in this research slice.
+
+## 2026-10-08 — poster-cover/M2.3
+
+Klein4B quantized local validation passed. FP8 transformer + FP4 encoder + VAE total8.26GB, hash-verified. Default576x768 generation20.9s and reference edit22.9s;768x1024 succeeded with insufficient commit margin. Full measurements, output paths and limits: [side task](../side-tasks/2026-10-07-poster-cover/README.md). No automatic-layout or final-poster claim.

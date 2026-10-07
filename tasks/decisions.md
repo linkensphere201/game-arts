@@ -80,3 +80,11 @@ M3.4.1/M3.4.2 source and scene integration are complete: two editable .blend sou
 ## 2026-10-05: Source-only remote publication (M3.4.4)
 
 The user requested commit/push without resources or build products. Publish code, shaders, configuration, authored specifications and documentation only. Keep all asset binaries, generated native resources/scenes, images, captures, runtime logs/data, tools, models and packages local. Use a new source-only commit based directly on the prior remote main; preserve original local commits and files rather than rewriting history. Never merge the resource-bearing local lineage into the publication branch. Visual delivery remains local, and a fresh clone requires asset generation before running the demo.
+
+## 2026-10-07: poster-cover/M1 side-task research scope
+
+User requests an independent poster/cover task with reference-image editing, separately generated text layers and futureAPI, prioritizing local deployment. Created [the side-task documents](../side-tasks/2026-10-07-poster-cover/README.md) within game-arts; parent game-asset direction remains unchanged. Research recommendation (not an approved implementation): reuse installed RealVisXL/Animagine for visual layers, deterministic SVG/JSON typography for exact editable copy, and compositor exports. New editing/decomposition models are candidates, not automatic downloads. Z-Image remains removed.
+
+## 2026-10-08 — poster-cover/M2.3
+
+User approved download and validation of quantized FLUX.2 Klein4B. FP8 transformer and FP4 text encoder passed local generation/reference-edit tests. Use576x768 as initial default; higher-resolution success did not provide adequate commit margin. Existing-model reuse is no longer a prerequisite. Full poster layer generation/API remain separate work. See side task for source provenance and evidence.

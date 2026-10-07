@@ -132,3 +132,9 @@ Acceptance: one self-contained Godot outdoor scene with a broad grassy area, vis
 Blender is now installed per explicit user request, superseding the earlier not-installed condition. Source-authoring scripts assist Blender modeling and Godot assembly; the result is manually editable but not a mouse-only production demonstration. No characters or M4 automation product started.
 
 - M3.4.4: Prepare and audit source-only remote publication while preserving local resources and history.
+
+## Independent poster/cover side task (2026-10-07)
+
+Complex side task with its own qualified namespace, `poster-cover/M1` through `poster-cover/M4`; these do not renumber or replace parent M1-M9. [Local register](../side-tasks/2026-10-07-poster-cover/tasks/milestones.md): M1 research and scope (research completed), M2 layered-poster validation (proposed), M3 reusable local workflow (proposed), M4API (proposed). User authorized task creation and research. M2-M4 execution targets await review before implementation; no new model downloaded.
+
+- 2026-10-08: independent `poster-cover/M2.3.1-M2.3.3` completed (pinned quantized Klein installation, local generation/edit measurements and workflow handoff). This is a bounded feasibility slice, not completion of full layered-poster M2 or API M4.

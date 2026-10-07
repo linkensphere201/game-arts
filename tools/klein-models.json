@@ -1,0 +1,26 @@
+[
+  {
+    "repository": "black-forest-labs/FLUX.2-klein-4b-fp8",
+    "revision": "5b4408e59397a4a37ccb46afe426d8ed86379441",
+    "file": "flux-2-klein-4b-fp8.safetensors",
+    "bytes": 4070624520,
+    "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6",
+    "destination": ".local/reference-comfy/models/diffusion_models/flux-2-klein-4b-fp8.safetensors"
+  },
+  {
+    "repository": "Comfy-Org/vae-text-encorder-for-flux-klein-4b",
+    "revision": "5f526678002e43af5551dadb73ce2e8c91b43afe",
+    "file": "split_files/text_encoders/qwen_3_4b_fp4_flux2.safetensors",
+    "bytes": 3848213998,
+    "sha256": "3eab03a77adb0ee5304a4e677d5c10ac22f9049c1d7c894adca4f8bb39206ca8",
+    "destination": ".local/reference-comfy/models/text_encoders/qwen_3_4b_fp4_flux2.safetensors"
+  },
+  {
+    "repository": "Comfy-Org/vae-text-encorder-for-flux-klein-4b",
+    "revision": "5f526678002e43af5551dadb73ce2e8c91b43afe",
+    "file": "split_files/vae/flux2-vae.safetensors",
+    "bytes": 336211292,
+    "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3",
+    "destination": ".local/reference-comfy/models/vae/flux2-vae.safetensors"
+  }
+]

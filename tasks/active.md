@@ -1,4 +1,8 @@
 # Active Tasks
+## Current side task — poster-cover/M2.3 (2026-10-08)
+
+[Poster/cover generation](../side-tasks/2026-10-07-poster-cover/README.md): user authorized new task and local-model research for reference editing, independent text layers and a futureAPI. M2.3.1-M2.3.3 quantized Klein download and local generation/edit validation completed: 576x768 default, roughly21s generation and23s reference edit in the tested live runtime. Full layered-poster implementation, larger comparison and API remain deferred. Existing game-art work and model installations remain intact.
+
 
 ## Current Status
 

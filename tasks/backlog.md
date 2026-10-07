@@ -23,3 +23,7 @@ Do not automatically reopen SDXL compatibility work, alter system virtual memory
 - M2.3.4 supersedes the earlier interleaved prototype order: select a bounded environment and manually validate whitebox -> one Blender/GLB module -> reusable kit -> Godot composition/collision/lighting -> fresh import and export. Character production follows environment acceptance.
 
 - M3.4 follow-up: review the small coastal scene with the user before character work. If iterative source changes become frequent, replace native mesh snapshots with linked GLB wrappers; do not start workflow productization solely because this scene runs.
+
+- poster-cover/M1.2.1: review the [independent poster/cover side-task plan](../side-tasks/2026-10-07-poster-cover/tasks/milestones.md), select the first use case, fonts/reference and text-export format. Proposed M2 is one layered poster with existing models; M3 reusable workflow and M4API follow accepted output. No implementation or new downloads authorized by the research request alone.
+
+- 2026-10-08, poster-cover/M2.3 completed: quantized Klein feasibility test. Next: review generated style and separately scope accurate text layers/composition; full API remains deferred.

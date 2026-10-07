@@ -47,3 +47,7 @@ Project started 2026-10-02. Documentation was adapted from `E:\projects\project-
 ## 3D scene
 
 The new [Sunward Coast demo](scene-demo/README.md) is a compact 40 x 36 m outdoor scene with grass, sunshine and coast. Open `scene-demo/project.godot` in Godot 4.7.2. Editable Blender sources are under `art-source/environment/`; Blender 4.5.14 portable is in `.local/blender/blender-4.5.14-windows-x64/`. Scene delivery validation is tracked separately from the earlier sprite MVP.
+
+## Poster and cover side task
+
+[Poster/cover generation research](side-tasks/2026-10-07-poster-cover/README.md), created2026-10-07: local-first reference-image editing, independent editable text layers and a future API. Research is complete; quantized Klein local generation/editing validation (M2.3) passed on 2026-10-08. Full layered-poster implementation and API remain deferred. This is independent of the existing game-art milestones.

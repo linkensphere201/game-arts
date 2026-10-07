@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "canvas": {"width": 576, "height": 768},
+  "background": "../../.local/reference-comfy/output/poster_klein/base_00002_.png",
+  "font": {"family": "Microsoft YaHei", "file": "C:/Windows/Fonts/msyh.ttc", "boldFile": "C:/Windows/Fonts/msyhbd.ttc"},
+  "layers": [
+    {"id": "brand", "text": "海岸小铺  /  SUMMER SERIES", "x": 40, "y": 39, "width": 440, "height": 28, "fontSize": 15, "minFontSize": 15, "lineHeight": 22, "fill": "#235950"},
+    {"id": "title", "text": "把夏天\n装进杯里", "x": 36, "y": 108, "width": 400, "height": 142, "fontSize": 58, "minFontSize": 48, "lineHeight": 68, "fill": "#164C42", "weight": 700},
+    {"id": "subtitle", "text": "鲜橙气泡饮 · 清爽一整夏", "x": 40, "y": 266, "width": 410, "height": 36, "fontSize": 18, "minFontSize": 16, "lineHeight": 28, "fill": "#44675C"},
+    {"id": "price_label", "text": "夏日尝鲜价 / 元", "x": 40, "y": 546, "width": 195, "height": 30, "fontSize": 15, "minFontSize": 13, "lineHeight": 23, "fill": "#164C42"},
+    {"id": "price", "text": "29", "x": 36, "y": 572, "width": 170, "height": 83, "fontSize": 70, "minFontSize": 50, "lineHeight": 80, "fill": "#164C42", "weight": 700},
+    {"id": "footer", "text": "示例海报 · 非真实促销活动", "x": 40, "y": 721, "width": 460, "height": 28, "fontSize": 12, "minFontSize": 12, "lineHeight": 19, "fill": "#164C42"}
+  ]
+}

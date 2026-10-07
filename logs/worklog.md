@@ -88,3 +88,11 @@ Reopened both Blender sources successfully. Imported the complete source into a 
 ## 2026-10-05 - M3.4.4 source-only publication
 
 The pending local history contains asset binaries and cannot be pushed as-is. Created `.local/source-publish` on `codex/source-only` from remote main `faa1cf2`, copied only 53 approved source/document paths, and excluded 104 tracked asset/output paths. Added resource/output ignore rules and documented that remote clones require asset generation. Original files and commit history remain intact. Audit the entire outgoing lineage before normal fast-forward publication to origin/main.
+
+## 2026-10-07: poster-cover/M1.1.1-M1.1.3 side-task research
+
+Applied create-task template/builder to side-tasks/2026-10-07-poster-cover, with12 English documents and scoped M1-M4 plan. Compared primary-source local models, reference editing approaches, native text versus raster layers, hardware/complete-package constraints and futureAPI boundaries. Existing portrait measurements were labeled historical, not new poster tests. Recommended existing-model layered composition first; klein4B is a conditional editing challenger, AnyText2 optional lettering, Qwen20B alternatives deferred. No weights, inference, service implementation or deletion. Updated parent indexes; checked local document links, placeholders and Git whitespace. Local documentation checkpoints only; no push.
+
+## 2026-10-08 — poster-cover/M2.3
+
+User-authorized quantized Klein install and validation completed. Three pinned weights verified, three local generation/edit runs inspected;576x768 default saved. Source-only checkpoints include reusable workflows and memory-aware runner. Weights/results stay under ignored.local; no push. See side task README for evidence and limitations.
