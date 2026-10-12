@@ -1,0 +1,32 @@
+"""Owned silhouettes for bounded local inventory model redraws."""
+from pathlib import Path
+from PIL import Image,ImageDraw
+ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'production/pixel-rpg/model-wave-01/guided'
+im=Image.new('RGBA',(512,512));d=ImageDraw.Draw(im)
+d.polygon([(256,55),(302,130),(277,337),(235,337),(210,130)],fill='#b8c6ba',outline='#354e49',width=7)
+d.polygon([(256,55),(256,325),(277,337),(302,130)],fill='#6b9690')
+d.line((256,103,256,322),fill='#e2e1c5',width=5)
+d.rounded_rectangle((172,321,340,349),8,fill='#c1a166',outline='#554631',width=7)
+d.rounded_rectangle((235,348,277,438),6,fill='#75513a',outline='#44362e',width=6)
+for y in [364,385,406]:d.line((239,y,274,y+9),fill='#b18b58',width=5)
+d.ellipse((228,426,284,465),fill='#b5975d',outline='#534532',width=6)
+im.save(OUT/'sword-layout.png')
+im=Image.new('RGBA',(512,512));d=ImageDraw.Draw(im)
+d.polygon([(256,70),(407,123),(385,321),(330,395),(256,446),(182,395),(127,321),(105,123)],fill='#b49961',outline='#4c4935',width=8)
+d.polygon([(256,93),(380,143),(359,307),(311,373),(256,413),(201,373),(153,307),(132,143)],fill='#347c70',outline='#615638',width=6)
+d.polygon([(256,94),(256,412),(311,373),(359,307),(380,143)],fill='#285e58')
+d.polygon([(256,181),(303,245),(256,314),(209,245)],fill='#ba9c5f',outline='#584d34',width=6)
+im.save(OUT/'shield-layout.png')
+im=Image.new('RGBA',(512,512));d=ImageDraw.Draw(im)
+for x,y in [(170,125),(257,78),(340,135)]:
+    d.line((256,428,x,y),fill='#557447',width=12)
+    d.ellipse((x-48,y,x+18,y+93),fill='#65895a',outline='#344e37',width=6)
+    d.ellipse((x+2,y+63,x+73,y+118),fill='#86a566',outline='#344e37',width=6)
+d.rounded_rectangle((225,315,284,347),6,fill='#a88958',outline='#615139',width=6)
+im.save(OUT/'herb-layout.png')
+im=Image.new('RGBA',(512,512));d=ImageDraw.Draw(im)
+d.ellipse((90,100,422,432),fill='#977443',outline='#55452e',width=8)
+d.ellipse((90,77,422,409),fill='#c6a35e',outline='#55452e',width=8)
+d.ellipse((116,103,396,383),outline='#e1c88b',width=10)
+d.polygon([(256,156),(312,242),(256,328),(200,242)],fill='#8b713e',outline='#e1c88b',width=7)
+im.save(OUT/'coin-layout.png')

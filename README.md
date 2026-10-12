@@ -48,6 +48,12 @@ Project started 2026-10-02. Documentation was adapted from `E:\projects\project-
 
 The new [Sunward Coast demo](scene-demo/README.md) is a compact 40 x 36 m outdoor scene with grass, sunshine and coast. Open `scene-demo/project.godot` in Godot 4.7.2. Editable Blender sources are under `art-source/environment/`; Blender 4.5.14 portable is in `.local/blender/blender-4.5.14-windows-x64/`. Scene delivery validation is tracked separately from the earlier sprite MVP.
 
-## Poster and cover side task
+## Transferred project: poster-cover
 
-[Poster/cover generation research](side-tasks/2026-10-07-poster-cover/README.md), created2026-10-07: local-first reference-image editing, independent editable text layers and a future API. Research is complete; quantized Klein local generation/editing validation (M2.3) passed on 2026-10-08. Full layered-poster implementation and API remain deferred. This is independent of the existing game-art milestones.
+Status: TRANSFERRED on 2026-10-08 to [dist-poster-pool-projects](../dist-poster-pool-projects/projects/poster-cover/README.md). Poster research, planning, API/demo follow-ups and implementation records are maintained there; application code remains E:/projects/poster-harness. Poster work is no longer part of this project's active scope.
+
+game-arts continues its original Godot-first game-asset route, including scene/asset refinement and the planned M5.2.8 shared-rig 3D-to-sprite character pilot. Preserve realistic/cartoon directions, accepted asset studies and original M5-M9 scope.
+
+## Shared resource location update — 2026-10-08
+
+Reusable model weights, portable tools and downloaded archives now live under E:/shared-resources; their former .local directories are compatibility junctions. Project outputs and logs remain here. This supersedes the earlier statement that all resources physically live under this project. See [shared resource map](../dist-poster-pool-projects/context/shared-resources.md).

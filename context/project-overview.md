@@ -33,3 +33,15 @@ AI-assisted production is the accepted direction: AI references and script assis
 ## Current 3D scene (M3.4)
 
 The first 3D environment is a compact 40 x 36 m sunny coastal meadow, authorized on 2026-10-05. See [scene demo](../scene-demo/README.md). Blender 4.5.14 LTS portable is installed inside `.local/blender/`; the scene has editable Blender source, explicit GLB exports and native Godot resources. AI-assisted offline construction is used; no 3D generative model is required. Scene assets precede characters.
+
+## Confirmed art directions (2026-10-06, M3.6.4)
+
+Maintain two distinct future art routes: realistic and cartoon. Both require finished surface detail through suitable textures/materials, not only coarse geometry with flat colors. Realistic work emphasizes plausible shape, natural variation, weathering and material response. Cartoon work uses intentionally designed shapes, color regions, painted/simplified texture detail and coherent shading; cartoon does not mean unfinished or detail-free. Polygon count alone is not the quality target. The user requests recording these routes, not immediate production of two complete packs or selection of one for the current coast.
+
+## Current scope after transfer — 2026-10-08
+
+Poster-cover is TRANSFERRED to E:/projects/dist-poster-pool-projects; its application code remains E:/projects/poster-harness. It is no longer an active game-arts side task. This project continues AI-assisted Godot game-art production, both realistic/cartoon surface directions, and the planned M5.2.8 shared-rig 3D-to-sprite character pilot within existing M5-M9 scope. Existing assets and scene work remain intact. Shared models/tools are infrastructure, not a change of product direction.
+
+## Current character foundation — 2026-10-11
+
+M5.2.9 replaces repair of the generated clothed character as the production approach: accepted anatomical base body -> independent clothing/equipment -> topology/UV/textures -> skeleton/weights -> animation/rendering/Godot. Prior M5.2.8 trials remain reference-only. Immediate work is open-resource research; MakeHuman/MPFB and Blender CC0 base meshes are candidates, not installed/validated selections. Shared animation and eight-direction sprites remain the later objective.

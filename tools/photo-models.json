@@ -1,0 +1,50 @@
+[
+  {
+    "repository": "SG161222/RealVisXL_V5.0",
+    "revision": "ac93e0dda1f6d448cae19bbfab8c5e720a5e48bc",
+    "file": "RealVisXL_V5.0_fp16.safetensors",
+    "bytes": 6938065488,
+    "sha256": "6a35a7855770ae9820a3c931d4964c3817b6d9e3c6f9c4dabb5b3a94e5643b80",
+    "destination": ".local/models/RealVisXL_V5.0_fp16.safetensors"
+  },
+  {
+    "repository": "SG161222/Realistic_Vision_V6.0_B1_noVAE",
+    "revision": "9a857a696b9aabbf509073e0aa55ec8200b6ef7d",
+    "file": "Realistic_Vision_V6.0_NV_B1_fp16.safetensors",
+    "bytes": 2132625894,
+    "sha256": "c48bfd159cd7a6507b128685e963c398fa72399cefafaf603781df50ce836cc7",
+    "destination": ".local/models/Realistic_Vision_V6.0_NV_B1_fp16.safetensors"
+  },
+  {
+    "repository": "stabilityai/sd-vae-ft-mse-original",
+    "revision": "629b3ad3030ce36e15e70c5db7d91df0d60c627f",
+    "file": "vae-ft-mse-840000-ema-pruned.safetensors",
+    "bytes": 334641190,
+    "sha256": "735e4c3a447a3255760d7f86845f09f937809baa529c17370d83e4c3758f3c75",
+    "destination": ".local/reference-comfy/models/vae/vae-ft-mse-840000-ema-pruned.safetensors"
+  },
+  {
+    "repository": "Comfy-Org/z_image_turbo",
+    "revision": "6fc90a3b1b653e935a0d175e260736de25b84df5",
+    "file": "split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors",
+    "bytes": 6201001296,
+    "sha256": "be517ebd47c912a5626a588e1aeea43e6be4a43c0cdcd2b48a2a780d9f358635",
+    "destination": ".local/reference-comfy/models/diffusion_models/z_image_turbo_int8_convrot.safetensors"
+  },
+  {
+    "repository": "Comfy-Org/z_image_turbo",
+    "revision": "6fc90a3b1b653e935a0d175e260736de25b84df5",
+    "file": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
+    "bytes": 5631994051,
+    "sha256": "72450b19758172c5a7273cf7de729d1c17e7f434a104a00167624cba94f68f15",
+    "destination": ".local/reference-comfy/models/text_encoders/qwen_3_4b_fp8_mixed.safetensors"
+  },
+  {
+    "repository": "Comfy-Org/z_image_turbo",
+    "revision": "6fc90a3b1b653e935a0d175e260736de25b84df5",
+    "file": "split_files/vae/ae.safetensors",
+    "bytes": 335304388,
+    "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+    "destination": ".local/reference-comfy/models/vae/ae.safetensors"
+  }
+]

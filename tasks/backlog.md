@@ -24,6 +24,25 @@ Do not automatically reopen SDXL compatibility work, alter system virtual memory
 
 - M3.4 follow-up: review the small coastal scene with the user before character work. If iterative source changes become frequent, replace native mesh snapshots with linked GLB wrappers; do not start workflow productization solely because this scene runs.
 
-- poster-cover/M1.2.1: review the [independent poster/cover side-task plan](../side-tasks/2026-10-07-poster-cover/tasks/milestones.md), select the first use case, fonts/reference and text-export format. Proposed M2 is one layered poster with existing models; M3 reusable workflow and M4API follow accepted output. No implementation or new downloads authorized by the research request alone.
+- M3.4.5 follow-up: improve tree/shrub silhouettes and introduce a few coherent variants; add ground-surface detail and then approachable Godot controls. Keep the first scene compact and defer characters until the environment is accepted.
 
-- 2026-10-08, poster-cover/M2.3 completed: quantized Klein feasibility test. Next: review generated style and separately scope accurate text layers/composition; full API remains deferred.
+- M3.6.2/M3.6.3: Deferred rock study and integration. When production resumes, validate a surfaced sample before broad replacement; retain separate realistic/cartoon evaluation under M3.6.4.
+- M3.6.4: Future asset art must follow either the realistic or cartoon route with finished surface detail. Decide sample/reference, camera distance and texture budget at implementation time; both full asset sets are not started.
+
+- M3.8.2-M3.8.5: follow the vegetation/ground sample sequence and acceptance criteria in context/architecture.md; prioritize grounded surface/grass blending before full tree production and coast replacement.
+
+## Alternative delivery route: 3D-rendered 2D assets (2026-10-06)
+
+- M3.8.10 follow-up, deferred/not started: potentially reuse Blender assets to render consistent fixed-view transparent images for Godot 2D scene assembly. Consider camera/projection, scale, tile transitions, shadows and sorting when revisited. This is an optional future product direction, not a change to the current Godot 3D scope; no comparison prototype is authorized.
+
+## 2026-10-07: M5.2.8 future character production pilot
+
+Prioritize the shared-rig modular 3D-to-sprite pilot described in decisions.md and milestones.md. Validate one walk action across three appearances before expanding to 16. Determine base proportions, module/rig compatibility, pixel rendering treatment and measured adaptation cost. Running remains deferred. Preserve all prior studies; no implementation, downloads or asset replacement in this documentation slice.
+
+- TRANSFERRED (2026-10-08): poster-cover/M1.2.1 and later poster scope belong to [dist-poster-pool-projects](../../dist-poster-pool-projects/projects/poster-cover/tasks/milestones.md); no game-arts follow-up is queued.
+
+- TRANSFERRED (2026-10-08): poster-cover/M2.3/M2.4/M4.1 results and remaining work are maintained in the destination. These IDs are historical references, not local backlog.
+
+## 2026-10-11 — M5.2.9 deferred parameterized character expansion
+
+After acceptance of one standard body and the simple single-character production path, evaluate bounded body/face/appearance parameters and shared outfit/action reuse. Normal, strong, slim, frail and heavy presets, species accessories and batch generation remain deferred ideas. Do not start with a three-body comparison or build a general character/wardrobe system before the baseline works.

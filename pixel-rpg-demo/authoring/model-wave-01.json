@@ -1,0 +1,475 @@
+{
+  "batch": "model-wave-01",
+  "model": "DreamShaper_8_pruned.safetensors",
+  "stage": "original concept generation and static sprite review; not finished animation",
+  "style": "Mosslight Journey: clean anime cel shading, colored outlines, teal/cream/brass/brown shared materials",
+  "assets": [
+    {
+      "id": "ch_rowan",
+      "category": "character",
+      "seed": 741001,
+      "description": "human female swordsman, normal athletic build, auburn bob hair and side braid, amber eyes, teal shoulder cape, cream tunic dress, brown belt and knee boots, sword in scabbard",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_sylva",
+      "category": "character",
+      "seed": 741002,
+      "description": "female elf mage, slender build, long pointed ears, pale golden braided hair, jade eyes, teal split traveling robe with brass trim, short wooden staff with teal crystal",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_bren",
+      "category": "character",
+      "seed": 741003,
+      "description": "male dragonborn warrior, broad muscular build, clearly visible curved ivory horns and small scaled tail, grey blue scaled face, steel shoulder armor over teal tabard, heavy boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_osric",
+      "category": "character",
+      "seed": 741004,
+      "description": "elderly human male swordsman, lean frail build, grey swept hair, short grey beard, weathered brown cloak, cream shirt, leather sword belt, worn boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_mira",
+      "category": "character",
+      "seed": 741005,
+      "description": "female wolf beastfolk healer, slender build, pointed furry ears and fluffy tail, copper ponytail, cream apron over teal dress, herb pouch, ankle boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_tovin",
+      "category": "character",
+      "seed": 741006,
+      "description": "male goblin merchant, short heavy round build, green skin, long ears, friendly face, brown side parted hair, ochre waistcoat, cream shirt, leather ledger satchel",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_neris",
+      "category": "character",
+      "seed": 741007,
+      "description": "female elf steward, slim build, long pointed ears, black hair in two low buns, dignified face, burgundy tailored long coat, brass keys at waist, cream cuffs",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_pella",
+      "category": "character",
+      "seed": 741008,
+      "description": "female fox beastfolk nun, normal build, pointed fox ears and fox tail, auburn bob hair, modest ankle length dark teal religious habit, cream wimple and veil, brass pendant",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_garran",
+      "category": "character",
+      "seed": 741009,
+      "description": "male dragonborn blacksmith, powerful muscular build, curved horns and scale patches, dark short undercut hair, brown leather apron over rolled sleeve cream shirt, heavy gloves and work boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_edda",
+      "category": "character",
+      "seed": 741010,
+      "description": "female goblin farmer, plump round build, green skin and long ears, straw hat, loose green overalls, cream work shirt, practical boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_lio",
+      "category": "character",
+      "seed": 741011,
+      "description": "young adult human male courier, small thin build, short red hair, coral cropped jacket, cream trousers, large leather letter bag, light boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_vessa",
+      "category": "character",
+      "seed": 741012,
+      "description": "female elf witch, slender build, pointed ears, long muted violet hair, pointed teal witch hat, cream and violet traveling dress, small brass clasps, wooden staff",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_soren",
+      "category": "character",
+      "seed": 741013,
+      "description": "human male court envoy, normal build, swept silver hair, dark blue structured mantle over cream tunic, restrained gold trim, leather document case",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_fenn",
+      "category": "character",
+      "seed": 741014,
+      "description": "female wolf beastfolk ranger, strong sturdy build, wolf ears and bushy tail, brown twin braids, short moss green poncho, leather armguards and boots",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_ivara",
+      "category": "character",
+      "seed": 741015,
+      "description": "female dragonborn relic hunter, athletic build, curved ivory horns and visible scaled tail, grey short spiky hair, slate blue utility coat, protective leather gauntlet and relic pouch",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "ch_dulce",
+      "category": "character",
+      "seed": 741016,
+      "description": "female goblin musician, round heavy build, green skin and long ears, muted pink curly hair, cream blouse with brown waistcoat, small lute carried on shoulder strap",
+      "size": [
+        512,
+        768
+      ],
+      "target": [
+        96,
+        128
+      ]
+    },
+    {
+      "id": "building_guild",
+      "category": "building",
+      "seed": 742001,
+      "description": "small fantasy adventurer guild house, warm cream plaster, brown timber framing, teal shingle pitched roof, brass diamond-shaped guild sign, stone foundation, one wooden door and two windows",
+      "size": [
+        768,
+        768
+      ],
+      "target": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "building_inn",
+      "category": "building",
+      "seed": 742002,
+      "description": "small cozy fantasy village inn, cream plaster and timber framing, teal roof, two stories, brass lanterns, hanging wooden cup sign, flower window boxes",
+      "size": [
+        768,
+        768
+      ],
+      "target": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "building_chapel",
+      "category": "building",
+      "seed": 742003,
+      "description": "small fantasy village chapel, cream stone walls, teal peaked roof, simple brass diamond crest, arched doorway, small bell tower",
+      "size": [
+        768,
+        768
+      ],
+      "target": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "building_smithy",
+      "category": "building",
+      "seed": 742004,
+      "description": "compact fantasy blacksmith workshop, warm plaster and brown timber, teal pitched roof, stone chimney, open forge bay, workbench and anvil",
+      "size": [
+        768,
+        768
+      ],
+      "target": [
+        256,
+        256
+      ]
+    },
+    {
+      "id": "prop_chest",
+      "category": "prop",
+      "seed": 743001,
+      "description": "one closed wooden treasure chest, dark brown planks, brass bands and a diamond shaped latch",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "prop_barrel",
+      "category": "prop",
+      "seed": 743002,
+      "description": "one upright oak barrel with iron hoops, readable wooden staves",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "prop_crate",
+      "category": "prop",
+      "seed": 743003,
+      "description": "one square wooden shipping crate, diagonal cross brace and brass corners",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "prop_well",
+      "category": "prop",
+      "seed": 743004,
+      "description": "one small stone village well with a teal roof and wooden posts, coiled rope and bucket",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "prop_oak",
+      "category": "prop",
+      "seed": 743005,
+      "description": "one small lush oak tree, warm brown trunk, layered rounded green foliage clusters",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "prop_sign",
+      "category": "prop",
+      "seed": 743006,
+      "description": "one wooden signpost, hanging teal sign bearing one simple brass diamond, no letters",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "item_sword",
+      "category": "item",
+      "seed": 743007,
+      "description": "one elegant straight steel sword, brass crossguard and brown leather grip, no extra weapons",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "item_shield",
+      "category": "item",
+      "seed": 743008,
+      "description": "one compact kite shield, dark teal painted face, brass rim and a simple diamond emblem",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "item_potion",
+      "category": "item",
+      "seed": 743009,
+      "description": "one round glass potion bottle containing teal liquid, wooden stopper and brass diamond medallion",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "item_crystal",
+      "category": "item",
+      "seed": 743010,
+      "description": "one angular teal magic crystal with translucent faceted surfaces, no base",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "item_book",
+      "category": "item",
+      "seed": 743011,
+      "description": "one closed teal leather spellbook, brass corners and diamond clasp, cream page edges",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "item_herb",
+      "category": "item",
+      "seed": 743012,
+      "description": "one tied bundle of healing herbs, green pointed leaves, cream flowers, brown twine",
+      "size": [
+        512,
+        512
+      ],
+      "target": [
+        64,
+        64
+      ]
+    }
+  ],
+  "style_contract": {
+    "reference": "production/pixel-rpg/candidates/mosslight_chibi_731212_00001_.png",
+    "rendering": "2D anime cel shading with clear colored outlines, matte materials and limited broad shadow bands",
+    "lighting": "soft upper-left key, no photographic highlights or dramatic cast shadows",
+    "characters": "approximately 3.5-4 heads tall, same camera and foot line; build changes width/mass rather than arbitrary scale",
+    "environment": "matching hand-drawn material treatment; overhead square-grid camera must be corrected before final gameplay integration",
+    "colors": "teal, cream, brass and brown world materials; hair/class accents may differ",
+    "reject": [
+      "photorealistic/3D material rendering",
+      "decorative backdrop or framing",
+      "unrequested duplicate figures",
+      "large head/body-ratio drift",
+      "wrong species/class/build",
+      "incompatible scene camera"
+    ],
+    "approval": "manual review required per asset; generation success is not approval",
+    "review_gate": "Require an approved cross-category pilot (character, building, prop, item) before expanding replacement production. Matching palette alone is insufficient.",
+    "pixel_finish": "Shared pixel density, colored edge treatment and material ramps at gameplay size; resolution-study targets are provisional, not final delivery sizes."
+  }
+}

@@ -51,3 +51,25 @@ __pycache__/
 /assets/**
 !/assets/**/
 !/assets/**/*.md
+/scene-demo/sunward_coast/meshes/
+/scene-demo/sunward_coast/props/
+/scene-demo/sunward_coast/scenes/
+
+/scene-demo/sunward_coast/docs/GODOT_NOTICES.txt
+
+/rock-demo/stone_asset/meshes/
+
+/nature-demo/*_asset/meshes/
+/nature-demo/*_asset/textures/
+/nature-demo/*_asset/inventory.json
+
+# Pixel RPG generated outputs remain local.
+/production/pixel-rpg/runs/
+/production/pixel-rpg/candidates/
+/pixel-rpg-demo/mosslight/catalog.json
+/pixel-rpg-demo/mosslight/theme/manifest.json
+/pixel-rpg-demo/mosslight/modular/catalog.json
+/production/pixel-rpg/model-sprite-study/
+/production/pixel-rpg/model-wave-01/
+/validation/pixel-rpg/review-*-relocated/
+/production/pixel-rpg/animagine-comparison/

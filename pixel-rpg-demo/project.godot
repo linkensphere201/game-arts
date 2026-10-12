@@ -1,0 +1,14 @@
+config_version=5
+[application]
+config/name="Mosslight Journey - M5 Pixel RPG"
+run/main_scene="res://modular.tscn"
+[display]
+window/size/viewport_width=640
+window/size/viewport_height=448
+window/size/window_width_override=1280
+window/size/window_height_override=896
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.10,0.13,0.17,1)

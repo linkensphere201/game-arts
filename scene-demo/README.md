@@ -13,20 +13,13 @@ Open `project.godot` in Godot **4.7.2 standard** and press F6 on `levels/coast.t
 
 This is a free-camera art demonstration. It is not a character controller or a complete game. Collision is provided for the ground, rocks and tree trunks; a separate test capsule validates the ground route. The free camera can pass through geometry and leave the finite scenery patch.
 
-## Edit and reuse
+## Edit and reuse (0.2.0-rc1)
 
-`levels/coast_environment.tscn` is the environment without UI or camera. Instance it in another scene to reuse the complete composition. Keep `assets/`, `materials/` and `levels/` at their relative project paths when copying it. The six original GLBs can also be imported individually into Godot or Blender.
+The current canonical package is `sunward_coast/`: 16 props plus terrain, linked GLB wrappers, shaders, independent Inspector controls and component gallery. Copy this one folder to another project root, keeping its name. Instance `sunward_coast/scenes/environment.tscn` for the composition, or individual `props/*.tscn` for components. Older `assets/`, `materials/` and `levels/coast_environment.tscn` are retained historical outputs and are not the current reusable package.
 
-- `assets/`: terrain, tree, shrub, grass tuft, daisy and limestone GLBs; saved wind-grass mesh.
-- `materials/`: editable ocean and grass shaders/materials.
-- `levels/`: native editable environment and importing demo.
-- `scripts/coast_demo.gd`: free camera, HUD and explicit validation-only capture flags.
-- `../art-source/environment/coastal-kit.blend`: editable component workshop; objects spread across X for inspection.
-- `../art-source/environment/coastal-terrain.blend`: editable terrain, UVs and vertex palette.
+Press Tab in the demonstration for bilingual grass, sunlight, wind, wave and foam controls. Runtime preview edits are temporary; save Inspector edits in your own Godot scene for persistence. You do not need Blender for normal placement and tuning.
 
-In Godot, open the environment scene to move trees/rocks, tune `AfternoonSun` and `SkyAndAtmosphere`, or adjust the sea material. The grass is saved in 20 spatial MultiMesh batches; each batch has editable transforms and uses the shared wind mesh. The source Blender terrain uses vertex colors rather than downloaded textures.
-
-**Reimport boundary:** this prototype saves snapshots of imported meshes into the assembled native scene. Re-exporting a GLB updates that GLB's imported scene but does not automatically replace those snapshots. For manual iteration, replace the relevant native mesh/model while keeping its collision wrapper, or deliberately rebuild from the authoring recipe. Back up edited scenes before rebuilding: the authoring scripts overwrite their named outputs and do not preserve subsequent hand edits. Fully linked reimport-safe wrappers are a future improvement, not a passed claim.
+See [buyer guide](sunward_coast/docs/README.md), [catalog](sunward_coast/docs/CATALOG.md), [release evidence and remaining gates](sunward_coast/docs/RELEASE.md), and [provenance/terms draft](sunward_coast/docs/LICENSE-DRAFT.md). Model reimport updates prop/terrain visuals; collisions remain independent. Scattered grass/flower mesh snapshots still require deliberate replacement or assembly rebuild.
 
 ## Production and local tools
 
@@ -58,3 +51,15 @@ The scene-construction command must use a real rendering backend: a headless dum
 Forward+ is the tested target on this Windows laptop; other renderers/platforms are not delivery targets. No lightmap bake, terrain streaming, shoreline physics, swimming, tree foliage collision or characters. Water is an opaque stylized shader with analytical shore foam, not a fluid simulation; the foam is tied to this terrain's shoreline. The finite terrain borders can be exposed by unrestricted free-camera flight. User visual acceptance remains separate from technical tests.
 
 See [validation](../validation/coast/README.md) for actual checks and screenshots.
+
+## Visual polish pass (M3.4.5, 2026-10-06)
+
+The first polish pass replaces repeated ocean glitter/parallel foam bands with noise-warped swells, distance-faded detail and a broken advancing/receding shore front. Shallow/deep colors, wave speed and foam strength are shader parameters. Grass density now varies in broad patches, tapers at the path and beach, and uses spatially coherent tint; flowers favor denser patches. The current layout contains 6,202 grass tufts and 184 flowers. Terrain bounds, five tree locations and saved camera views remain unchanged; rebuilding resamples secondary prop rotations/scales/placements through the seeded recipe.
+
+This is a visual iteration, not sale-ready acceptance. Next priorities are distinctive tree/shrub silhouettes, better sand/grass ground surfaces and a small set of reusable prop variants. Inspector-facing controls can follow once the visual defaults settle. The latest local screenshots/checks are in [polish validation](../validation/coast-polish/README.md); older validation is historical evidence for the previous build.
+
+## Current candidate archives
+
+Run `python tools/package-coast-release.py` from the repository root after rebuilding the scene, executable and engine notices (`--headless --path scene-demo --script res://authoring/export_engine_notices.gd`). Outputs are `builds/sunward-coast-0.2.0-rc1-{godot,demo,windows,blender}.zip` plus an archive manifest. These remain local. Developer export presets and tools are intentionally absent from the buyer demo; install Godot export templates separately if exporting a modified demo.
+
+M3.5 supersedes the prototype reimport limitation for linked props/terrain and the old six-model inventory. Earlier visual-pass notes below are historical. See [current validation](../validation/coast-release/README.md).

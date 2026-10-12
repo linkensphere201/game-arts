@@ -1,0 +1,617 @@
+{
+  "task": "M5.2.6.2",
+  "date": "2026-10-07",
+  "reviewer": "assistant visual review; not user acceptance",
+  "delivery_approved": false,
+  "assets": [
+    {
+      "id": "ch_rowan",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Promising illustration; proportions, camera and sprite-scale readability still need normalization."
+    },
+    {
+      "id": "ch_sylva",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Hair differs from brief; verify proportions, staff and gameplay camera.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/sylva-staff-761002.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/sylva.png",
+        "status": "static rework study; not delivery approved",
+        "reason": "Golden hair, pointed ears and crystal staff restored; staff fragmentation, fine-detail density, overhead camera and directional garments remain unresolved.",
+        "rear_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/sylva-back-details-761011.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/sylva-back.png",
+          "godot_capture": "production/pixel-rpg/model-wave-01/guided/sylva-godot-review.png",
+          "status": "rework: spike removed and teal cuff restored; flat hair, pixel detail and camera still unresolved",
+          "rejected_trials": {
+            "761008": "head and garment structure drift",
+            "761009": "wrong proportions, framing and costume",
+            "761010": "striped hair guide artifacts"
+          }
+        }
+      }
+    },
+    {
+      "id": "ch_bren",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Original attempt has short proportions and weak dragonborn anatomy; retained but superseded by a static rework study.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/bren-773001.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/bren.png",
+        "godot_capture": "production/pixel-rpg/model-wave-01/guided/bren-godot.png",
+        "status": "static front study; not delivery approved",
+        "reason": "Broad armored dragonborn with grey face, ivory horns and visible tail; camera, fine-scale pixel cleanup and all directional animation remain incomplete.",
+        "rear_source": "production/pixel-rpg/model-wave-01/guided/bren-back-773003.png",
+        "side_source": "production/pixel-rpg/model-wave-01/guided/bren-side-clean-773015.png",
+        "turnaround_capture": "production/pixel-rpg/model-wave-01/guided/bren-turnaround-godot.png",
+        "turnaround_status": "Three static studies; side ornament, extra cheek frills and boot lacing removed. Ear shape, armor finish, boots and silhouette proportions still vary; no motion or diagonal views."
+      }
+    },
+    {
+      "id": "ch_osric",
+      "status": "rework",
+      "reviewed_attempts": [
+        1,
+        2
+      ],
+      "selected_source": null,
+      "reason": "Attempt 1 loses age/beard; attempt 2 copies female reference identity. Neither meets role/build.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/osric-sword-775003.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/osric.png",
+        "godot_capture": "production/pixel-rpg/model-wave-01/guided/osric-godot.png",
+        "status": "Front static study, not delivery approved",
+        "reason": "Age, beard and narrow build retained. Sheathed sword now has separate grip, brass guard/tip and leather suspension, no longer an extended cloak strip. Carry angle, hands/camera and all directional motion remain incomplete.",
+        "equipment_trials": {
+          "775002": "Sword separated, but floating beside figure and old cloak sliver remains; superseded.",
+          "775003": "Suspension strap added behind hand and old sliver removed; current static study."
+        },
+        "rear_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/osric-back-775004.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/osric-back.png",
+          "godot_capture": "production/pixel-rpg/model-wave-01/guided/osric-back-godot.png",
+          "status": "Rear static review only: closed cloak and back hair/heels; sword guard detail, cloak length and shading differ. No side/diagonal views or animation."
+        },
+        "side_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/osric-side-clean-775017.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/osric-side.png",
+          "capture": "production/pixel-rpg/model-wave-01/guided/osric-turnaround-godot.png",
+          "body_scale": {
+            "split_y": 260,
+            "factor": 0.6
+          },
+          "status": "Unapproved static profile; rolled cream sleeve and bare forearm restored. Extra elbow marks and vertical boot laces removed; vertical brown/brass sword, continuous hip cloth and suspension strap reconstructed. Boot silhouette, proportions and camera still need correction. Body normalization retained; no animation.",
+          "rejected_trials": {
+            "775005": "Double head and missing elderly identity.",
+            "775006": "Flat oversized face and equipment drift.",
+            "775007": "Double head; lower head usable for bounded repair only.",
+            "775008": "Hair remnants at mask boundary.",
+            "775009": "White gap in reconstructed crown.",
+            "775010": "Cap-like hard crown seam."
+          }
+        }
+      }
+    },
+    {
+      "id": "ch_mira",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Original hair/backdrop and weapon diverge from the healer brief; replaced by an unapproved static study.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/mira-herbs-774002.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/mira.png",
+        "godot_capture": "production/pixel-rpg/model-wave-01/guided/mira-godot.png",
+        "status": "front static review; not delivery approved",
+        "reason": "Copper ponytail, beast ears/tail, apron and ankle boots restored; herb bundle added; hand clarity, camera, contour style and all directional motion remain incomplete.",
+        "rear_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/mira-sleeves-774004.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/mira-back.png",
+          "godot_capture": "production/pixel-rpg/model-wave-01/guided/mira-back-godot.png",
+          "status": "Rear static review; sage rolled sleeves restored, crossed apron straps and waist ties retained. Tail-tip shape, garment volume and proportions need reconciliation. No directional animation or delivery approval."
+        },
+        "side_trials": {
+          "guide": "pixel-rpg-demo/authoring/prepare_mira_side.py",
+          "status": "All three trials rejected; no selected side sprite",
+          "rejected": {
+            "774005": "IPAdapter 0.4 and denoise 0.48: three-quarter face, elongated body, invented neck cloth and extra pouch.",
+            "774006": "No adapter, denoise 0.36: profile retained but flat guide-like rendering, crude face/hand; unsuitable against accepted illustration quality.",
+            "774007": "No adapter, denoise 0.55: polished profile but tall body, white instead of sage blouse, missing herb pouch and altered belt/boots."
+          },
+          "next": "Improve owned profile guide with reference-consistent body ratio, shaded cloth and pouch silhouette before bounded local redraw; do not count these as finished directions."
+        },
+        "side_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/mira-details-774021.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/mira-side.png",
+          "godot_capture": "production/pixel-rpg/model-wave-01/guided/mira-turnaround-godot.png",
+          "status": "Unapproved static profile: upper-arm seam blended and pouch restored to warm brown; correct hand/pouch/belt layering retained. Boot volume, tail silhouette and finer side rendering still differ. No animation.",
+          "rejected_detail_trial": "774009: blocky hair over ear and sock-mask protrusion; not promoted.",
+          "rejected_detail_trials": {
+            "774009": "Blocky hair and cuff mask protrusion.",
+            "774013": "Bow removal created a notch in the blouse/chest contour; superseded by 774014.",
+            "774017": "Pouch relocation turns the hand into a buckle; flat reconstruction of the old pouch area.",
+            "774018": "Restored cloth shading but introduced a duplicate old hand contour; pouch placement not promoted.",
+            "774019": "Forearm reconstruction left a flare/seam at the old mask boundary; enlarged transition for 774020.",
+            "774022": "Hair brightness-band guide produces flat blotches and visible region boundaries; rejected.",
+            "774023": "Blended guide and higher denoise restore some locks but retain horizontal ponytail bands and ear-root seams; rejected.",
+            "774025": "Curved shadow guide creates patchy spots at scalp/ponytail; retain 774024 candidate and 774021 baseline."
+          },
+          "style_next": "Refine the continuous-lock shadow candidate, checking source forehead planes as well as native sprite readability.",
+          "style_candidate": {
+            "source": "production/pixel-rpg/model-wave-01/guided/mira-details-774024.png",
+            "sprite": "pixel-rpg-demo/mosslight/model_review/mira-side-locks.png",
+            "capture": "production/pixel-rpg/model-wave-01/guided/mira-hair-godot.png",
+            "status": "Candidate only: warmer copper and larger hair masses read closer to front at sprite size; broad forehead shadow is still angular in source. Baseline 774021 retained."
+          }
+        },
+        "palette_study": {
+          "script": "pixel-rpg-demo/authoring/study_mira_palette.py",
+          "status": "Neither candidate promoted",
+          "trials": {
+            "24": "23 shared swatches after snapping; loses eye/sleeve separation without fixing profile shape.",
+            "40": "38 shared swatches after snapping; preserves more detail but does not reconcile shadow/line style."
+          },
+          "next": "Address side shadow masses and contour design; do not use color-count reduction as a style-consistency acceptance test."
+        }
+      }
+    },
+    {
+      "id": "ch_tovin",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Green skin and heavy build missing; excessively short proportions.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/tovin-refined-776005.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/tovin.png",
+        "capture": "production/pixel-rpg/model-wave-01/guided/tovin-godot.png",
+        "status": "Unapproved front study; green skin, ears, waistcoat and satchel restored. Belly widened and adult facial features strengthened. Eye readability and camera remain pending. No directional animation.",
+        "rejected_trials": {"776002": "Lost satchel and boots, added tie, still juvenile face.", "776003": "Duplicate high and low eyebrows.", "776004": "Original brow remnants on forehead."},
+        "rear_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/tovin-back-clean-776010.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/tovin-back.png",
+          "capture": "production/pixel-rpg/model-wave-01/guided/tovin-back-godot.png",
+          "status": "Unapproved rear static study: back waistcoat, hair, bag panel and heels reconstructed. Stray right hip strap removed; hair length and camera need review; no animation."
+        },
+        "side_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/tovin-side-bag-776024.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/tovin-side.png",
+          "capture": "production/pixel-rpg/model-wave-01/guided/tovin-turnaround-godot.png",
+          "status": "Unapproved right profile; bag restored locally; orange cheek and green neck clasp removed. Measured trouser edges now join low shoes without flared cuffs; hem shading transition remains. Folded linen collar and leather shoulder segment restored, gold back trim removed. Narrow profile eye and mature cheek folds added; eye shape, strap continuity and camera need review; no animation.",
+          "rejected_trials": {
+            "776011": "Missing bag; retained as repair source only.",
+            "776012": "Reference-conditioned trial changed waistcoat to long coat and shoes to tall boots."
+          }
+        }
+      }
+    },
+    {
+      "id": "ch_neris",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Mixed species features and unwanted lettering.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/neris-keys-777006.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/neris.png",
+        "capture": "production/pixel-rpg/model-wave-01/guided/neris-godot.png",
+        "status": "Unapproved front study: elf ears, black low buns, burgundy long coat and belt keys. Oversized chest ornament, gold placket and tassel removed; key teeth and camera need review. No additional directions or animation.",
+        "initial_trial": "777001 omitted waist keys; retained as local repair source.",
+        "rear_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-back-cuffs-777008.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-back.png",
+          "capture": "production/pixel-rpg/model-wave-01/guided/neris-back-godot.png",
+          "status": "Unapproved rear static study; closed coat panel, rear hair/buns, belt and heels. Short cream cuffs and visible left hand restored; sleeve-edge polish and camera/proportions pending. No directional animation."
+        },
+        "northeast_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-NE-777022.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-NE.png",
+          "status": "Unapproved northeast static study; coherent oblique back panel and diagonal shoes; neck seam, flat shading, bun shape and belt panels need refinement; no movement",
+          "rejected_trials": {
+            "777019": "head remains direct rear; enlarged cuffs",
+            "777020": "overlapping ears and rough face edge",
+            "777021": "near elf ear and compact buns lost"
+          },
+          "selected_trial": 777022
+        },
+        "southeast_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-SE-details-777026.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-SE.png",
+          "status": "Unapproved southeast static study; oblique front coat, low bun and hip keys; wine cloth hue restored; brass buttons, hand details and camera need refinement; no movement",
+          "trials": {
+            "777023": "coherent diagonal body but missing keys and low bun",
+            "777024": "local bun/key repair; coat remained brown",
+            "777025": "belt exclusion left brown sleeve bands; rejected",
+            "777026": "current wine cloth including sleeves; zero outside-mask difference"
+          },
+          "capture": "production/pixel-rpg/model-wave-01/guided/neris-front-diagonal-godot.png"
+        },
+        "west_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-W-details-777031.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-W.png",
+          "status": "Unapproved west static study; independent redraw from reflected guide with hidden far-side keys; invented pouch removed, bare hand restored; cloth shading, collar, buttons and projection need review; no movement",
+          "trials": {
+            "777027": "generated pouch and white hand",
+            "777028": "rectangular cloth patch",
+            "777029": "patch seam",
+            "777030": "hem gap",
+            "777031": "current; preserve original hem junction"
+          },
+          "capture": "production/pixel-rpg/model-wave-01/guided/neris-west-godot.png"
+        },
+        "sw_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-SW-777032.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-SW.png",
+          "status": "Unapproved static; independent local redraw from equipment-corrected reflected guide; expression, shading, proportions and details pending; no motion"
+        },
+        "nw_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-NW-777033.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-NW.png",
+          "status": "Unapproved static; independent local redraw from equipment-corrected reflected guide; expression, shading, proportions and details pending; no motion"
+        },
+        "side_study": {
+          "source": "production/pixel-rpg/model-wave-01/guided/neris-profile-777018.png",
+          "sprite": "pixel-rpg-demo/mosslight/model_review/neris-side.png",
+          "status": "Unapproved right-facing static study; far eye removed and hanging keys restored; head and neck rebuilt together, broader profile and short collar; face shading, bun detail, collar color and projection need review; no animation",
+          "trials": {
+            "777009": "far eye and belt loop; rejected",
+            "777010": "far eye remains; rejected",
+            "777011": "previous static study; repair input",
+            "777012": "open eye but detached bun and tall collar",
+            "777013": "neck patch seam; rejected",
+            "777014": "neck patch seam; rejected",
+            "777015": "previous eye/ear repair; source for head reconstruction",
+            "777016": "broad head but high white collar; rejected",
+            "777017": "short collar but flat face and jagged mouth; rejected",
+            "777018": "current unapproved full head/neck reconstruction; shading and collar color pending"
+          },
+          "verification": "zero outside-mask difference; shared 96x144 binary-alpha sole122 conversion; actual Godot three-view render inspected"
+        }
+      }
+    },
+    {
+      "id": "ch_pella",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Nun habit/veil not established; decorative background."
+    },
+    {
+      "id": "ch_garran",
+      "status": "rework",
+      "reviewed_attempts": [
+        1,
+        2
+      ],
+      "selected_source": null,
+      "reason": "Attempt 1 duplicates figures; attempt 2 becomes slender female. Neither meets muscular male blacksmith brief."
+    },
+    {
+      "id": "ch_edda",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Multiple figures; goblin skin/build missing."
+    },
+    {
+      "id": "ch_lio",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Modern clothing conflicts with fantasy costume contract."
+    },
+    {
+      "id": "ch_vessa",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Promising witch illustration; normalize proportions and gameplay camera before conversion."
+    },
+    {
+      "id": "ch_soren",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Decorative backdrop; proportions and camera need review."
+    },
+    {
+      "id": "ch_fenn",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Promising ranger illustration; strong build and camera need correction."
+    },
+    {
+      "id": "ch_ivara",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Dragonborn traits unclear; background and proportions need review."
+    },
+    {
+      "id": "ch_dulce",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Goblin traits, heavy build and instrument missing."
+    },
+    {
+      "id": "building_guild",
+      "status": "rework",
+      "reviewed_attempts": [
+        1,
+        2
+      ],
+      "selected_source": null,
+      "reason": "Attempt 1 has rendered material/backdrop; attempt 2 is cropped and realistic. Neither matches character drawing style."
+    },
+    {
+      "id": "building_inn",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Rendered appearance, mismatched roof palette and building design."
+    },
+    {
+      "id": "building_chapel",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Rendered appearance and circular framing."
+    },
+    {
+      "id": "building_smithy",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Multiple isometric rendered buildings instead of one top-down illustrated smithy."
+    },
+    {
+      "id": "prop_chest",
+      "status": "rework",
+      "reviewed_attempts": [
+        1,
+        2
+      ],
+      "selected_source": null,
+      "reason": "Both attempts show open chest; attempt 2 cropped/glossy. Wrong state and rendering style."
+    },
+    {
+      "id": "prop_barrel",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Wheel/logo instead of barrel.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/barrel-760001.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/barrel.png",
+        "status": "integrated study; final art approval pending",
+        "reason": "Guided local model now yields recognizable upright barrel; 48x64 palette-matched conversion and courtyard placement checked."
+      }
+    },
+    {
+      "id": "prop_crate",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Abstract geometric emblem instead of crate.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/crate-760002.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/crate.png",
+        "status": "integrated static study; art approval pending",
+        "reason": "Guided local model replaced abstract emblem with a closed wooden crate; pixel conversion and courtyard collision verified."
+      }
+    },
+    {
+      "id": "prop_well",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Circular logo instead of well."
+    },
+    {
+      "id": "prop_oak",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Abstract graphic instead of tree.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/tree-764001.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/tree.png",
+        "status": "static environment study; simplified surface detail remains",
+        "reason": "Actual source, native-scale scene, ground collision and tree front/back sorting inspected"
+      }
+    },
+    {
+      "id": "prop_sign",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Logo instead of signpost."
+    },
+    {
+      "id": "item_sword",
+      "status": "rework",
+      "reviewed_attempts": [
+        1,
+        2
+      ],
+      "selected_source": null,
+      "reason": "Attempt 1 includes person; attempt 2 multiple cropped swords with realistic rendering.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/sword-763001.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/sword.png",
+        "status": "32px static study; art approval pending",
+        "reason": "Actual local-model image and Godot-size sprite inspected; no item-use implementation"
+      }
+    },
+    {
+      "id": "item_shield",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Bird logo instead of shield.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/shield-763002.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/shield.png",
+        "status": "32px static study; art approval pending",
+        "reason": "Actual local-model image and Godot-size sprite inspected; no item-use implementation"
+      }
+    },
+    {
+      "id": "item_potion",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Packaging-like logo and border; not matching world prop.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/potion-760003.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/potion.png",
+        "status": "32px inventory preview study; art approval pending",
+        "reason": "Guided local model with shared existing palette; source and gameplay-size icon inspected."
+      }
+    },
+    {
+      "id": "item_crystal",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Abstract emblem instead of crystal.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/crystal-760004.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/crystal.png",
+        "status": "32px inventory preview study; art approval pending",
+        "reason": "Guided local model with shared existing palette; source and gameplay-size icon inspected."
+      }
+    },
+    {
+      "id": "item_book",
+      "status": "rework",
+      "reviewed_attempts": [
+        1,
+        2
+      ],
+      "selected_source": null,
+      "reason": "Attempt 1 abstract logo; attempt 2 realistic partly open journal. Neither matches style/state."
+    },
+    {
+      "id": "item_herb",
+      "status": "rework",
+      "reviewed_attempts": [
+        1
+      ],
+      "selected_source": null,
+      "reason": "Decorative flower vase/logo instead of tied healing-herb bundle; inconsistent rendering.",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/herb-763003.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/herb.png",
+        "status": "32px static study; art approval pending",
+        "reason": "Actual local-model image and Godot-size sprite inspected; no item-use implementation"
+      }
+    },
+    {
+      "id": "item_coin",
+      "status": "study",
+      "selected_source": null,
+      "reason": "New currency pilot; not approved catalog completion",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/coin-763004.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/coin.png",
+        "status": "32px static study; art approval pending",
+        "reason": "Actual local-model image and Godot-size sprite inspected; no item-use implementation"
+      }
+    },
+    {
+      "id": "prop_rock",
+      "status": "study",
+      "selected_source": null,
+      "reason": "Outdoor pilot; art approval pending",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/rock-764002.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/rock.png",
+        "status": "static environment study; simplified surface detail remains",
+        "reason": "Actual source, native-scale scene, ground collision and tree front/back sorting inspected"
+      }
+    },
+    {
+      "id": "prop_table",
+      "status": "study",
+      "selected_source": null,
+      "reason": "Furniture scale pilot; art approval pending",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/table-765001.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/table.png",
+        "status": "static furniture study; camera/material approval pending",
+        "reason": "Actual local source and interactive Godot scale/collision room inspected"
+      }
+    },
+    {
+      "id": "prop_bookshelf",
+      "status": "study",
+      "selected_source": null,
+      "reason": "Furniture scale pilot; art approval pending",
+      "replacement_study": {
+        "source": "production/pixel-rpg/model-wave-01/guided/bookshelf-765002.png",
+        "sprite": "pixel-rpg-demo/mosslight/model_review/bookshelf.png",
+        "status": "static furniture study; camera/material approval pending",
+        "reason": "Actual local source and interactive Godot scale/collision room inspected"
+      }
+    }
+  ]
+}

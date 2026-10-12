@@ -5,15 +5,17 @@ Writes editable Blender sources and explicit GLBs. No filesystem deletions.
 from pathlib import Path
 import math
 import random
+import json
 import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / 'scene-demo' / 'assets'
+OUT = ROOT / 'scene-demo' / 'sunward_coast' / 'meshes'
 SOURCE = ROOT / 'art-source' / 'environment'
 SOURCE.mkdir(parents=True, exist_ok=True)
 OUT.mkdir(parents=True, exist_ok=True)
 random.seed(731)
+inventory=[]
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.context.scene.unit_settings.system = 'METRIC'
 
@@ -57,7 +59,8 @@ def join_export(name, objects):
     bpy.ops.object.select_all(action='DESELECT')
     for ob in objects: ob.select_set(True)
     bpy.context.view_layer.objects.active = objects[0]
-    bpy.ops.object.join()
+    if len(objects)>1:
+        bpy.ops.object.join()
     ob = bpy.context.object
     ob.name = name
     bpy.context.scene.cursor.location = (0,0,0)
@@ -65,6 +68,7 @@ def join_export(name, objects):
     bpy.ops.object.transform_apply(location=False, rotation=True, scale=True)
     bpy.ops.export_scene.gltf(filepath=str(OUT/(name+'.glb')), export_format='GLB',
         use_selection=True, export_yup=True)
+    inventory.append({'name':name,'vertices':len(ob.data.vertices),'triangles':sum(len(poly.vertices)-2 for poly in ob.data.polygons),'dimensions_m':[round(float(v),3) for v in ob.dimensions]})
     return ob
 
 # The kit is laid out in a source workshop after each origin-centered export.
@@ -74,19 +78,32 @@ for v in rock.data.vertices:
 rock = join_export('limestone', [rock])
 rock.location.x = -12
 
-parts = [branch((0,0,0),(.3,0,3.4),.27,.13)]
-for endpoint in [(-1.4,.1,4), (1.7,.4,4.3), (.4,-1.2,4.2),(.2,1.3,4.6)]:
-    parts.append(branch((.18,0,2.5),endpoint,.13,.055))
-for i, (x,y,z,s) in enumerate([(-1.4,.1,4.2,1.6),(1.3,.2,4.6,1.9),(.2,-1.1,4.6,1.7),
-    (.2,1.2,4.9,1.6),(-.7,.6,5.1,1.8),(.25,.1,5.5,1.8)]):
-    parts.append(ico('Canopy', (x,y,z), (s,s*.85,s*.58), leaves[i%4],2))
-tree = join_export('coastal_tree', parts)
-tree.location.x = -5
+def make_tree(name, lean, height_scale, radius, source_x):
+    joints=[(0,0,0),(.1,0,1.3*height_scale),(lean*.5,.06,2.7*height_scale),(lean,.1,3.8*height_scale)]
+    parts=[branch(joints[i],joints[i+1],.24*(1-i*.24)*height_scale,.18*(1-i*.26)*height_scale) for i in range(3)]
+    clusters=[(-1.1,.15,3.7,.95),(.9,.5,4.0,1.1),(.1,-.9,4.15,1.0),(-.5,1.0,4.35,.9),(.5,.35,4.8,1.0)]
+    for i,(x,y,z,size) in enumerate(clusters):
+        center=(x*radius+lean,y*radius,z*height_scale)
+        parts.append(branch(joints[2],center,.085*height_scale,.028))
+        for j in range(3):
+            a=j*2.2+i*.8
+            loc=(center[0]+.4*radius*math.cos(a),center[1]+.4*radius*math.sin(a),center[2]+.13*(j%2))
+            ob=ico('Leaf cluster',loc,(size*radius*.76,size*radius*.67,size*height_scale*.62),leaves[(i+j)%4],2)
+            for v in ob.data.vertices:
+                v.co *= 1+.12*math.sin(v.co.x*8+i*2)*math.cos(v.co.y*9+j)
+            parts.append(ob)
+    ob=join_export(name,parts)
+    ob.location.x=source_x
+    return ob
+
+tree=make_tree('coastal_tree',.3,1.0,1.05,-6)
+make_tree('tree_windswept',1.6,.9,1.0,-13).location.y=8
+make_tree('tree_sapling',.1,.58,.65,-6).location.y=8
 
 parts=[]
 for i in range(5):
     a=i*math.tau/5
-    parts.append(ico('Bush',(.55*math.cos(a),.55*math.sin(a),.55),(.8,.65,.65),leaves[i%4],1))
+    parts.append(ico('Bush',(.45*math.cos(a),.45*math.sin(a),.35+.12*(i%2)),(.65,.55,.5),leaves[i%4],2))
 bush=join_export('shrub',parts)
 bush.location.x=3
 
@@ -123,6 +140,49 @@ for i in range(5):
 parts.append(ico('Pollen',(0,0,.5),(.05,.05,.035),gold,1))
 flower=join_export('daisy',parts)
 flower.location.x=10
+# Additional variants are separate editable meshes, not just scene scale changes.
+for name,sc,loc in [('rock_flat',(1.1,.85,.28),(0,8,0)),('rock_tall',(.78,.65,.8),(4,8,0))]:
+    ob=ico(name,(0,0,sc[2]*.8),sc,stone,2)
+    for v in ob.data.vertices: v.co *= random.uniform(.86,1.12)
+    ob=join_export(name,[ob]);ob.location=loc
+parts=[ico('Low shrub',(-.5,0,.28),(.8,.48,.38),leaves[0],2),ico('Low shrub',(.4,.1,.32),(.7,.65,.44),leaves[2],2)]
+ob=join_export('shrub_low',parts);ob.location=(8,8,0)
+# Duplicates are independently editable source variants after export.
+for source,name,scale,loc in [(grass,'grass_short',(.85,.85,.58),(12,8,0)),(flower,'flower_blue',(1.0,1.0,1.35),(16,8,0))]:
+    ob=source.copy();ob.data=source.data.copy();bpy.context.collection.objects.link(ob)
+    ob.location=(0,0,0);ob.scale=scale
+    if name=='flower_blue':
+        blue=material('Blue coastal petals',(.34,.31,.63))
+        for i,m in enumerate(ob.data.materials):
+            if m.name=='Ivory petals':ob.data.materials[i]=blue
+    ob=join_export(name,[ob]);ob.location=loc
+def plank(name,at,size,mat):
+    bpy.ops.mesh.primitive_cube_add(size=1,location=at)
+    ob=bpy.context.object;ob.name=name;ob.scale=size;ob.data.materials.append(mat)
+    bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
+    bevel=ob.modifiers.new('Soft timber edges','BEVEL');bevel.width=.025;bevel.segments=1
+    bpy.context.view_layer.objects.active=ob;bpy.ops.object.modifier_apply(modifier=bevel.name)
+    return ob
+wood=material('Weathered timber',(.28,.20,.11))
+drift=material('Sun bleached driftwood',(.49,.39,.25))
+parts=[]
+for y in [-.19,0,.19]:parts.append(plank('Seat',(0,y,.65),(2.0,.17,.09),wood))
+for x in [-.77,.77]:
+    for y in [-.17,.17]:parts.append(plank('Leg',(x,y,.31),(.1,.1,.62),wood))
+    parts.append(plank('Back support',(x,-.29,.84),(.09,.09,.94),wood))
+for z in [.96,1.17]:parts.append(plank('Backrest',(0,-.31,z),(2.0,.08,.16),wood))
+ob=join_export('coastal_bench',parts);ob.location=(-12,15,0)
+parts=[branch((-1,0,.14),(.9,.1,.22),.15,.11),branch((.1,.04,.18),(.55,.43,.32),.09,.035)]
+for ob in parts:ob.data.materials.clear();ob.data.materials.append(drift)
+ob=join_export('driftwood',parts);ob.location=(-7,15,0)
+parts=[]
+for i in range(5):
+    a=i*2.4
+    parts.append(ico('Pebble',(.3*math.cos(a),.25*math.sin(a),.065),(.15,.11,.08),stone,2))
+ob=join_export('pebbles',parts);ob.location=(-3,15,0)
+ob=grass.copy();ob.data=grass.data.copy();bpy.context.collection.objects.link(ob)
+ob.location=(0,0,0);ob.scale=(.75,.75,1.6)
+ob=join_export('beach_reeds',[ob]);ob.location=(2,15,0)
 bpy.ops.wm.save_as_mainfile(filepath=str(SOURCE/'coastal-kit.blend'))
 
 # Separate editable terrain source: +Y in Blender becomes -Z in Godot.
@@ -157,6 +217,17 @@ for j in range(nz):
     for i in range(nx):
         a=j*(nx+1)+i;b=a+1;c=a+nx+1;d=c+1
         fs.extend([(a,c,b),(b,c,d)])
+# Close the finite display patch with a stone/soil skirt, including its underside.
+ring=list(range(nx+1))+[j*(nx+1)+nx for j in range(1,nz+1)]+[nz*(nx+1)+i for i in range(nx-1,-1,-1)]+[j*(nx+1) for j in range(nz-1,0,-1)]
+upper=[];lower=[]
+for index in ring:
+    x,y,z=vs[index]
+    upper.append(len(vs));vs.append((x,y,z));colors.append((.31,.27,.18,1))
+    lower.append(len(vs));vs.append((x,y,-3.0));colors.append((.19,.18,.13,1))
+for i in range(len(ring)):
+    n=(i+1)%len(ring)
+    fs.extend([(upper[i],lower[i],upper[n]),(upper[n],lower[i],lower[n])])
+fs.append(tuple(reversed(lower)))
 mesh=bpy.data.meshes.new('Coastal terrain mesh')
 mesh.from_pydata(vs,[],fs)
 mesh.update()
@@ -176,4 +247,5 @@ mat.node_tree.links.new(vcol.outputs['Color'],mat.node_tree.nodes.get('Principle
 ob.data.materials.append(mat)
 join_export('terrain',[ob])
 bpy.ops.wm.save_as_mainfile(filepath=str(SOURCE/'coastal-terrain.blend'))
-print('COAST_ASSETS_EXPORTED: six GLBs and two editable .blend sources')
+(OUT/'inventory.json').write_text(json.dumps(inventory,indent=2),encoding='utf-8')
+print('COAST_ASSETS_EXPORTED:',len(inventory),'GLBs and two editable .blend sources')

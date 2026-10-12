@@ -1,0 +1,435 @@
+{
+  "version": 1,
+  "cell": [
+    48,
+    64
+  ],
+  "anchor": [
+    24,
+    56
+  ],
+  "directions": [
+    "S",
+    "SE",
+    "E",
+    "NE",
+    "N",
+    "NW",
+    "W",
+    "SW"
+  ],
+  "animations": {
+    "idle": {
+      "frames": 4,
+      "fps": 4
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 8
+    },
+    "run": {
+      "frames": 8,
+      "fps": 12
+    }
+  },
+  "hair": [
+    "crop",
+    "side_part",
+    "spiky",
+    "bob",
+    "long_straight",
+    "high_pony",
+    "twin_tails",
+    "braid",
+    "double_bun",
+    "curly",
+    "swept",
+    "undercut"
+  ],
+  "faces": [
+    {
+      "id": "oval",
+      "width": 7,
+      "jaw": 4,
+      "height": 9,
+      "eyes": 3,
+      "detail": "plain"
+    },
+    {
+      "id": "round",
+      "width": 8,
+      "jaw": 6,
+      "height": 8,
+      "eyes": 3,
+      "detail": "blush"
+    },
+    {
+      "id": "narrow",
+      "width": 6,
+      "jaw": 3,
+      "height": 10,
+      "eyes": 2,
+      "detail": "plain"
+    },
+    {
+      "id": "square",
+      "width": 8,
+      "jaw": 7,
+      "height": 9,
+      "eyes": 3,
+      "detail": "brow"
+    },
+    {
+      "id": "heart",
+      "width": 8,
+      "jaw": 3,
+      "height": 9,
+      "eyes": 4,
+      "detail": "plain"
+    },
+    {
+      "id": "long",
+      "width": 7,
+      "jaw": 5,
+      "height": 11,
+      "eyes": 3,
+      "detail": "brow"
+    },
+    {
+      "id": "soft",
+      "width": 7,
+      "jaw": 5,
+      "height": 8,
+      "eyes": 3,
+      "detail": "freckles"
+    },
+    {
+      "id": "angular",
+      "width": 7,
+      "jaw": 3,
+      "height": 10,
+      "eyes": 3,
+      "detail": "scar"
+    },
+    {
+      "id": "wide",
+      "width": 9,
+      "jaw": 6,
+      "height": 9,
+      "eyes": 4,
+      "detail": "plain"
+    },
+    {
+      "id": "petite",
+      "width": 6,
+      "jaw": 4,
+      "height": 8,
+      "eyes": 2,
+      "detail": "blush"
+    },
+    {
+      "id": "mature",
+      "width": 7,
+      "jaw": 5,
+      "height": 10,
+      "eyes": 3,
+      "detail": "lines"
+    },
+    {
+      "id": "bearded",
+      "width": 8,
+      "jaw": 6,
+      "height": 10,
+      "eyes": 3,
+      "detail": "beard"
+    }
+  ],
+  "headgear": [
+    "ribbon",
+    "circlet",
+    "beret",
+    "wizard_hat",
+    "hood",
+    "bonnet",
+    "goggles",
+    "feather_cap",
+    "flower",
+    "headband",
+    "helmet",
+    "hairpin"
+  ],
+  "outfits": [
+    "swordsman",
+    "mage",
+    "warrior",
+    "witch",
+    "nun",
+    "merchant",
+    "duelist",
+    "blacksmith",
+    "farmer",
+    "scout",
+    "cleric",
+    "ranger"
+  ],
+  "hair_colors": [
+    "#80503d",
+    "#3b3442",
+    "#c3a264",
+    "#ac573b",
+    "#cabf9d",
+    "#e0dacc",
+    "#467675",
+    "#706a91",
+    "#a16e80",
+    "#635344",
+    "#697779",
+    "#536249"
+  ],
+  "cloth_colors": [
+    "#327d80",
+    "#4d668b",
+    "#75608d",
+    "#985c74",
+    "#a55345",
+    "#a38648",
+    "#688456",
+    "#4c6861",
+    "#78778a",
+    "#b3a58a",
+    "#705948",
+    "#41556e"
+  ],
+  "skin_colors": [
+    "#edb88e",
+    "#dba078",
+    "#be805d",
+    "#946348",
+    "#f2c9a1",
+    "#a97558"
+  ],
+  "presets": [
+    {
+      "id": "cast_01",
+      "name": "Rowan",
+      "hair": 0,
+      "face": 0,
+      "headgear": -1,
+      "outfit": 0,
+      "hair_color": 0,
+      "cloth_color": 0,
+      "skin_color": 0,
+      "species": 0,
+      "body_type": 0
+    },
+    {
+      "id": "cast_02",
+      "name": "Sylva",
+      "hair": 4,
+      "face": 4,
+      "headgear": 11,
+      "outfit": 1,
+      "hair_color": 4,
+      "cloth_color": 0,
+      "skin_color": 1,
+      "species": 2,
+      "body_type": 2
+    },
+    {
+      "id": "cast_03",
+      "name": "Bren",
+      "hair": 2,
+      "face": 3,
+      "headgear": 10,
+      "outfit": 2,
+      "hair_color": 1,
+      "cloth_color": 1,
+      "skin_color": 2,
+      "species": 4,
+      "body_type": 1
+    },
+    {
+      "id": "cast_04",
+      "name": "Osric",
+      "hair": 10,
+      "face": 11,
+      "headgear": 3,
+      "outfit": 3,
+      "hair_color": 5,
+      "cloth_color": 10,
+      "skin_color": 3,
+      "species": 0,
+      "body_type": 3
+    },
+    {
+      "id": "cast_05",
+      "name": "Mira",
+      "hair": 7,
+      "face": 6,
+      "headgear": -1,
+      "outfit": 4,
+      "hair_color": 3,
+      "cloth_color": 2,
+      "skin_color": 4,
+      "species": 1,
+      "body_type": 2
+    },
+    {
+      "id": "cast_06",
+      "name": "Tovin",
+      "hair": 1,
+      "face": 5,
+      "headgear": 6,
+      "outfit": 5,
+      "hair_color": 9,
+      "cloth_color": 5,
+      "skin_color": 5,
+      "species": 3,
+      "body_type": 4
+    },
+    {
+      "id": "cast_07",
+      "name": "Neris",
+      "hair": 8,
+      "face": 2,
+      "headgear": 1,
+      "outfit": 6,
+      "hair_color": 1,
+      "cloth_color": 3,
+      "skin_color": 0,
+      "species": 2,
+      "body_type": 2
+    },
+    {
+      "id": "cast_08",
+      "name": "Pella",
+      "hair": 3,
+      "face": 1,
+      "headgear": 5,
+      "outfit": 4,
+      "hair_color": 0,
+      "cloth_color": 4,
+      "skin_color": 1,
+      "species": 1,
+      "body_type": 0
+    },
+    {
+      "id": "cast_09",
+      "name": "Garran",
+      "hair": 11,
+      "face": 3,
+      "headgear": 9,
+      "outfit": 7,
+      "hair_color": 1,
+      "cloth_color": 10,
+      "skin_color": 2,
+      "species": 4,
+      "body_type": 1
+    },
+    {
+      "id": "cast_10",
+      "name": "Edda",
+      "hair": 5,
+      "face": 8,
+      "headgear": 7,
+      "outfit": 8,
+      "hair_color": 2,
+      "cloth_color": 6,
+      "skin_color": 3,
+      "species": 3,
+      "body_type": 4
+    },
+    {
+      "id": "cast_11",
+      "name": "Lio",
+      "hair": 0,
+      "face": 9,
+      "headgear": 0,
+      "outfit": 9,
+      "hair_color": 3,
+      "cloth_color": 4,
+      "skin_color": 4,
+      "species": 0,
+      "body_type": 3
+    },
+    {
+      "id": "cast_12",
+      "name": "Vessa",
+      "hair": 4,
+      "face": 10,
+      "headgear": 2,
+      "outfit": 10,
+      "hair_color": 7,
+      "cloth_color": 2,
+      "skin_color": 5,
+      "species": 2,
+      "body_type": 2
+    },
+    {
+      "id": "cast_13",
+      "name": "Soren",
+      "hair": 1,
+      "face": 7,
+      "headgear": 1,
+      "outfit": 6,
+      "hair_color": 5,
+      "cloth_color": 1,
+      "skin_color": 0,
+      "species": 0,
+      "body_type": 0
+    },
+    {
+      "id": "cast_14",
+      "name": "Fenn",
+      "hair": 6,
+      "face": 4,
+      "headgear": -1,
+      "outfit": 11,
+      "hair_color": 9,
+      "cloth_color": 7,
+      "skin_color": 1,
+      "species": 1,
+      "body_type": 1
+    },
+    {
+      "id": "cast_15",
+      "name": "Ivara",
+      "hair": 2,
+      "face": 7,
+      "headgear": -1,
+      "outfit": 0,
+      "hair_color": 10,
+      "cloth_color": 8,
+      "skin_color": 2,
+      "species": 4,
+      "body_type": 1
+    },
+    {
+      "id": "cast_16",
+      "name": "Dulce",
+      "hair": 9,
+      "face": 6,
+      "headgear": 6,
+      "outfit": 5,
+      "hair_color": 8,
+      "cloth_color": 9,
+      "skin_color": 3,
+      "species": 3,
+      "body_type": 4
+    }
+  ],
+  "species": [
+    "human",
+    "beastfolk",
+    "elf",
+    "goblin",
+    "dragonborn"
+  ],
+  "body_types": [
+    "normal",
+    "strong",
+    "slender",
+    "frail",
+    "heavy"
+  ]
+}

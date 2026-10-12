@@ -1,0 +1,8 @@
+{
+  "default": "meadow",
+  "presets": {
+    "meadow": {"litter_count": 1900, "pebbles": 85, "turf_bias": 0.0, "edge_breakup": 0.32, "wetness": 0.12, "normal_strength": 0.4},
+    "dry_path": {"litter_count": 900, "pebbles": 120, "turf_bias": -0.20, "edge_breakup": 0.40, "wetness": 0.0, "normal_strength": 0.4},
+    "coastal_sand": {"litter_count": 500, "pebbles": 40, "turf_bias": -0.12, "edge_breakup": 0.25, "wetness": 0.35, "normal_strength": 0.3}
+  }
+}

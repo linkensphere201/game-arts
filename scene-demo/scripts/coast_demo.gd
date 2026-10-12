@@ -1,6 +1,8 @@
 extends Node3D
 ## Navigation and presentation only. All scenery is saved in the editor scene.
 @onready var camera: Camera3D = $Camera
+var sliders: Dictionary = {}
+var tuning_panel: PanelContainer
 var hud: CanvasLayer
 var status: Label
 var elapsed := 0.0
@@ -18,7 +20,12 @@ const VIEWS := [
 func _ready() -> void:
 	set_view(0)
 	create_hud()
+	create_tuning_panel()
 	for arg in OS.get_cmdline_user_args():
+		if arg == "--show-settings":
+			tuning_panel.visible = true
+		if arg == "--quality=low":
+			apply_quality(0)
 		if arg.begins_with("--capture-dir="):
 			capture_dir = arg.trim_prefix("--capture-dir=")
 		if arg.begins_with("--qa-seconds="):
@@ -45,7 +52,7 @@ func create_hud() -> void:
 	subtitle.add_theme_font_size_override("font_size",13)
 	hud.add_child(subtitle)
 	var controls := Label.new()
-	controls.text = "RMB + mouse  look     WASD  move     Q / E  down / up     Shift  faster\n1 / 2 / 3  viewpoints     H  hide interface     Esc  release mouse"
+	controls.text = "RMB + mouse  look     WASD  move     Q / E  down / up     Shift  faster\n1 / 2 / 3  viewpoints     Tab  settings     H  hide interface     Esc  release mouse"
 	controls.position = Vector2(42,820)
 	controls.add_theme_font_size_override("font_size",15)
 	controls.add_theme_color_override("font_shadow_color",Color(0,0,0,0.7))
@@ -57,13 +64,18 @@ func create_hud() -> void:
 	hud.add_child(status)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and not tuning_panel.visible:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if event.pressed else Input.MOUSE_MODE_VISIBLE
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		camera.rotation.y -= event.relative.x*0.003
 		camera.rotation.x = clampf(camera.rotation.x-event.relative.y*0.003,-1.45,1.45)
 	if event is InputEventKey and event.pressed and not event.echo:
 		match event.keycode:
+			KEY_TAB:
+				tuning_panel.visible = not tuning_panel.visible
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+				get_viewport().set_input_as_handled()
+
 			KEY_1: set_view(0)
 			KEY_2: set_view(1)
 			KEY_3: set_view(2)
@@ -115,3 +127,52 @@ func write_metrics() -> void:
 	if not capture_dir.is_empty():
 		var file := FileAccess.open(capture_dir.path_join("runtime-metrics.json"),FileAccess.WRITE)
 		file.store_string(JSON.stringify(result,"\t"))
+
+
+func apply_quality(index: int) -> void:
+	var environment: Node3D = $SunwardCoast
+	environment.grass_density = 0.45 if index == 0 else 1.0
+	environment.grass_distance = 28.0 if index == 0 else 55.0
+	if sliders.has("grass_density"):
+		sliders["grass_density"].set_value_no_signal(environment.grass_density)
+
+func create_tuning_panel() -> void:
+	tuning_panel = PanelContainer.new()
+	tuning_panel.position = Vector2(1190,130)
+	tuning_panel.custom_minimum_size = Vector2(365,360)
+	hud.add_child(tuning_panel)
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation",10)
+	tuning_panel.add_child(box)
+	var heading := Label.new()
+	heading.text = "  环境调整 / Environment"
+	box.add_child(heading)
+	var quality := OptionButton.new()
+	quality.add_item("轻量 / Low")
+	quality.add_item("完整 / High")
+	quality.selected = 1
+	quality.item_selected.connect(apply_quality)
+	box.add_child(quality)
+	add_slider(box,"草地密度 / Grass", "grass_density",0.2,1.0,0.05)
+	add_slider(box,"风力 / Wind", "wind_strength",0.0,2.0,0.05)
+	add_slider(box,"阳光 / Sun", "sunlight",0.2,1.8,0.05)
+	add_slider(box,"太阳角度 / Elevation", "sun_elevation",-80,-10,1)
+	add_slider(box,"海浪速度 / Waves", "wave_speed",0.0,2.0,0.05)
+	add_slider(box,"浪花 / Foam", "foam_strength",0.0,1.0,0.05)
+	var help := Label.new()
+	help.text = "Tab 关闭 · 预览调整不会写回文件"
+	box.add_child(help)
+	tuning_panel.visible = false
+
+func add_slider(parent: Node, title: String, property: String, minimum: float, maximum: float, step: float) -> void:
+	var label := Label.new()
+	label.text = title
+	parent.add_child(label)
+	var slider := HSlider.new()
+	slider.min_value = minimum
+	slider.max_value = maximum
+	slider.step = step
+	slider.value = $SunwardCoast.get(property)
+	sliders[property] = slider
+	slider.value_changed.connect(func(value: float): $SunwardCoast.set(property,value))
+	parent.add_child(slider)

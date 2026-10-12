@@ -1,0 +1,15 @@
+{
+  "status": "Art-directed landmark study; not a camera reprojection or accepted final sprite",
+  "cell": [96, 128],
+  "anchor": [48, 122],
+  "target_y": [8, 38, 42, 61, 82, 96, 122],
+  "landmarks": ["crown", "chin_or_nape", "shoulder", "waist", "tunic_hem", "knee_boot_top", "sole"],
+  "horizontal_scale": 0.2,
+  "views": [
+    {"direction":"S", "source":"production/pixel-rpg/model-sprite-study/segmented-source.png", "center_x":256, "source_y":[97,244,260,353,461,533,665]},
+    {"direction":"SE", "source":"production/pixel-rpg/model-wave-01/guided/rowan-SE-cape-757005.png", "center_x":268, "source_y":[88,235,267,350,461,540,684]},
+    {"direction":"E", "source":"production/pixel-rpg/model-wave-01/guided/rowan-side-shoulder-755004.png", "center_x":280, "source_y":[89,238,266,357,466,550,688]},
+    {"direction":"NE", "source":"production/pixel-rpg/model-wave-01/guided/rowan-NE-shoulder-758002.png", "center_x":277, "source_y":[89,244,275,366,503,554,684]},
+    {"direction":"N", "source":"production/pixel-rpg/model-wave-01/guided/rowan-N-shoulders-758001.png", "center_x":257, "source_y":[85,241,266,366,512,551,685]}
+  ]
+}

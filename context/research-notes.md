@@ -250,10 +250,99 @@ Deliver editable .blend sources (or parameter scripts plus editable outputs), GL
 
 No tools or asset packs were installed or downloaded for this research. No local 3D generation, Blender export or Godot 3D performance benchmark has yet been performed.
 
+## 2026-10-06: AAA grass visual reference (M3.8.6)
+
+User accepts the cartoon grass direction but requests more believable realistic grass. Inspected the actual local Windows screenshot, validation/nature/delivery/nature-3.png, against a public Red Dead Redemption 2 gameplay image published in [VGR's Yarrow guide](https://www.vgr.com/red-dead-redemption-2-where-to-find-yarrow-plants/). Browser capture saved locally at validation/nature/references/rdr2-grass-browser.jpg. This is a screenshot of a published game image, not a locally running game or an original asset.
+
+Observed in the reference: fine irregular silhouettes, low pale grass mixed with taller darker clumps, muted green/straw color variation, flowers/shrubs, and irregular exposed soil. Observed locally: broad straight strips, conspicuous similar clumps, saturated greens, dark rectangular-looking bases, and abrupt grass/path boundaries. Different camera distance, lighting and image resolution prevent an exact material/performance comparison. A still cannot establish wind quality, polygon counts, texture resolution or the game's rendering implementation.
+
+Recommended realistic-only next pass:
+1. Isolate realistic generation/output so rebuilding cannot overwrite the accepted cartoon treatment; the current shared authoring script generates both.
+2. Author narrow curved/twisted blades and irregular clumps; mix short ground cover, taller grasses, sparse seed heads and dry bent leaves.
+3. Reduce uniform saturation, vary leaf age and local color, and inspect veins/roughness/normal strength at actual gameplay distance.
+4. Scatter in uneven patches with shorter sparse path verges, exposed soil and dry litter instead of a sharp wall.
+5. Inspect front/back lighting, root contact and shadow behavior. Compare fixed cameras/light at close and gameplay distances; verify root-pinned motion and runtime cost before expanding coverage.
+
+These are production recommendations from visual assessment, not claims about RDR2's internal pipeline. More triangles or higher-resolution textures alone would not correct the observed silhouette and distribution problems. No asset code or output was changed in this comparison.
+
+## 2026-10-06: Free nature asset baseline (M3.8.10)
+
+User requests downloading free resources before deciding how to outperform them. Downloaded Kenney Nature Kit from the official [asset page](https://kenney.nl/assets/nature-kit) to .local/references/free-nature/kenney_nature-kit.zip (10,537,521 bytes; SHA256 FA7974A0D342BFE63C38664BA9F8EC1A4AAB8EA25F099BDC56870E33588C4D9D). CRC passed; extracted to .local/references/free-nature/kenney-nature. License.txt identifies Nature Kit 2.1, CC0 and personal/educational/commercial use. Website says 330 files; actual archive has 329 GLBs plus other model formats and preview images. Do not treat format duplicates as unique assets.
+
+Inspected the author's Sample.png and imported six representative GLBs (two grasses, bush, rock, oak and pine) into a separate Godot 4.7.2 Compatibility project at .local/references/free-nature/kenney-godot. All six rendered and benchmark.png saved without reported errors. This confirms this selection, not all 329 models. The author's sample is assembled promotional art; our six-item render is a simple inspection gallery, not a same-lighting comparative scene.
+
+Observation: simple geometry can still produce a coherent, useful stylized kit through consistent palette, broad catalog and modular scene construction. Kenney is a cartoon/low-poly benchmark, not a realism bar. More triangles, maps or procedural parameters in our current sample do not establish superior product value.
+
+Also found [Quaternius Ultimate Stylized Nature Pack](https://quaternius.com/packs/ultimatestylizednature.html): official page lists 63 models, CC0, textured assets with normal maps and FBX/OBJ/Blend/glTF. Official download points to a Google Drive folder; not downloaded or locally evaluated in this pass.
+
+Recommendation: compare equivalent styles and intended use. Define a testable advantage such as a cohesive ready-to-use Godot coast with rooted wind, usable collision, clear controls, sample layouts and documented performance. Next benchmark should place selected free assets and our assets in equivalent scenes/camera/light, then assess art quality and assembly effort. Slight visual improvement alone is not evidence of purchase demand. No third-party assets merged into our product or pushed remotely.
+
+## 2026-10-07: Reference-conditioned character consistency (M5.2.7.2)
+
+Local evidence: plain DreamShaper img2img can change viewpoint but also invent hair, sleeves, equipment and body proportions. Stronger layout conditioning helped rear garment structure but did not establish production-ready side views. A larger 512x768 rear study improved detail without proving cross-view identity.
+
+Investigate a separate appearance-reference input while retaining pose/layout guides. The official [ComfyUI IPAdapter Plus repository](https://github.com/cubiq/ComfyUI_IPAdapter_plus) documents SD1.5 Plus adapters and the ViT-H image encoder; this is an augmentation to the existing DreamShaper checkpoint, not switching to cloud generation. The repository is maintenance-only, so local compatibility must be tested rather than assumed. Current 8188 object_info has ControlNet/CLIPVision nodes but no IPAdapter, and control/vision weight folders were empty. No guarantee of identity preservation or animation consistency follows from model availability.
+
+Pinned support model repository h94/IP-Adapter revision 018e402774aeeddd60609b4ecdb7e298259dc729; official API metadata provides expected sizes/hashes. Support weights total 2,626,556,736 bytes. Node source pinned to cubiq/ComfyUI_IPAdapter_plus commit a0f451a5113cf9becb0847b92884cb10cbdec0ef; downloaded archive is retained locally for review. The chosen ordinary Plus route does not invoke FaceID/InsightFace. Inspected imports and model loader (safe_load=True); this is a bounded source inspection, not a security audit.
+
+Preparation uses tools/download-reference-models.ps1 and tools/start-reference-trial.ps1. The latter checks exact hashes, refuses duplicate/live trial launches, requires the main queue to be idle, releases only idle model cache, and applies the existing 10 GiB available-commit preflight before starting an isolated loopback trial on 8189. The main service and browser workflow remain available on 8188. Do not run both inference queues concurrently. No new inference was demonstrated merely by downloading weights.
+
 ## 2026-10-07: Poster/cover side task — poster-cover/M1.1.1-M1.1.3
 
-Research and model comparisons are maintained in [the side-task research record](../side-tasks/2026-10-07-poster-cover/context/research-notes.md). Recommend existing SDXL-family backgrounds plus separate SVG/JSON typography and transparent text exports. New instruction-editing candidate: FLUX.2 klein4B, whose official approximately13GBVRAM guidance does not establish feasibility on this8GBdevice. AnyText2 is an optional raster-lettering tool; Qwen20B editing/decomposition candidates are deferred. Distinguish reference guidance from exact preservation, and RGBA layers from editable text. No downloads or inference in this research slice.
+Research and model comparisons are maintained in [the side-task research record](../../dist-poster-pool-projects/projects/poster-cover/context/research-notes.md). Recommend existing SDXL-family backgrounds plus separate SVG/JSON typography and transparent text exports. New instruction-editing candidate: FLUX.2 klein4B, whose official approximately13GBVRAM guidance does not establish feasibility on this8GBdevice. AnyText2 is an optional raster-lettering tool; Qwen20B editing/decomposition candidates are deferred. Distinguish reference guidance from exact preservation, and RGBA layers from editable text. No downloads or inference in this research slice.
 
 ## 2026-10-08 — poster-cover/M2.3
 
-Klein4B quantized local validation passed. FP8 transformer + FP4 encoder + VAE total8.26GB, hash-verified. Default576x768 generation20.9s and reference edit22.9s;768x1024 succeeded with insufficient commit margin. Full measurements, output paths and limits: [side task](../side-tasks/2026-10-07-poster-cover/README.md). No automatic-layout or final-poster claim.
+Klein4B quantized local validation passed. FP8 transformer + FP4 encoder + VAE total8.26GB, hash-verified. Default576x768 generation20.9s and reference edit22.9s;768x1024 succeeded with insufficient commit margin. Full measurements, output paths and limits: [side task](../../dist-poster-pool-projects/projects/poster-cover/README.md). No automatic-layout or final-poster claim.
+
+## 2026-10-11 — M5.2.9.1 open human/clothing source research
+
+Scope: research only, following the user's reset to body -> independent clothing/equipment -> textures -> skeleton -> animation. No assets downloaded, software installed or models edited in this slice. Official pages were checked; published capabilities are not locally validated geometry.
+
+### Primary candidates
+
+1. [Blender Human Base Meshes](https://www.blender.org/download/demo-files/): the official listing identifies v1.4.1, CC0, approximately 49 MB, Blender 4.2+. The [official download index](https://download.blender.org/demo/asset-bundles/human-base-meshes/) lists its ZIP as 50,643,039 bytes. [Developer notes](https://developer.blender.org/docs/release_notes/4.0/asset_bundles/) describe realistic/stylized body/head assets and topology improvements. Good candidate for a directly editable Blender starting point. Choose a proper continuous body rather than a primitive blockout, then inspect joint topology; the whole bundle is not automatically game-ready. The older separate realistic_human_base.blend training download is CC-BY, not the same CC0 bundle.
+2. [MPFB Blender extension](https://extensions.blender.org/add-ons/mpfb/): parameterized human creation, clothing/bodypart library, rig options and MakeHuman compatibility. Core graphical assets are CC0 per [MPFB output FAQ](https://static.makehumancommunity.org/mpfb/faq/can_i_sell_models.html) and [MakeHuman license](https://github.com/makehumancommunity/makehuman/blob/master/LICENSE.md). Software and asset licenses are distinct. Third-party assets require their own license check. [Proxy documentation](https://static.makehumancommunity.org/mpfb/docs/assets/concept_proxymeshes.html) describes alternative low-density topologies and refitting after body changes. Recommend this ecosystem when body variants plus compatible clothing are the priority; anime/Q proportions still need deliberate art direction and validation.
+3. [MakeHuman asset packs](https://static.makehumancommunity.org/assets/assetpacks.html): official list separates CC0 and CC-BY. Useful CC0 candidates include shirts01, pants01, shoes01, dress01, hats02, gloves01, hair01, bodyparts01 (horns), equipment01 and suits02. Do not treat all community assets as CC0 or assume arbitrary downloaded garments fit a different base mesh.
+4. [Kenney Blaster Kit](https://kenney.nl/assets/blaster-kit): 40 files, CC0, stylized weapon supplement; not a complete humanoid/clothing foundation and not a close match to the fantasy wardrobe by itself.
+
+### Concrete clothes/equipment shortlist
+
+- [shirts01](https://static.makehumancommunity.org/assets/assetpacks/shirts01.html): tops/T-shirts/sweaters; listed 23 MB, CC0 entries.
+- [dress01](https://static.makehumancommunity.org/assets/assetpacks/dress01.html): dresses, tunic and kimono; listed 44 MB, CC0 entries.
+- [suits02](https://static.makehumancommunity.org/assets/assetpacks/suits02.html): fantasy/sci-fi suits including a monk robe and hood; listed 183 MB. The page also contains recognizable franchise-named designs; shortlist generic/original items rather than assuming a CC0 label clears third-party character rights.
+- [equipment01](https://static.makehumancommunity.org/assets/assetpacks/equipment01.html): listed 17 MB, CC0 weapons including sword, dagger, bow, hammer and magic sceptre.
+- [hats02](https://static.makehumancommunity.org/assets/assetpacks/hats02.html) and [shoes01](https://static.makehumancommunity.org/assets/assetpacks/shoes01.html): helmet and footwear starting points; inspect the exact chosen mesh, license and fit before use.
+
+### Quaternius licensing discrepancy
+
+[Universal Base Characters](https://quaternius.com/packs/universalbasecharacters.html) advertises six body variants, average 13k triangles, 20 hairstyles and CC0. [Fantasy Outfits](https://quaternius.com/packs/modularcharacteroutfitsfantasy.html) advertises 12 outfits/62 modular parts and CC0. These would be technically interesting, but the [current QAL page](https://quaternius.com/license.html), dated 2026-08-28, prohibits standalone redistribution of original or modified assets. Pack pages and the general license conflict. Do not select a newly obtained copy as our resale-asset foundation until its exact applicable grant is established. This research does not relicense older CC0 assets already obtained or assert a blanket ban on all rendered output.
+
+### Recommendation and next gate
+
+Compare MPFB/MakeHuman's body-and-clothing ecosystem with Blender's CC0 base-mesh bundle before choosing one canonical body. Favor MPFB for parameterized body variations and compatible wardrobe; favor the Blender bundle for direct stylized sculpt/edit work. Do not mix incompatible bases/garments without refitting. For initial review, obtain only one suitable body and a simple garment after this research stage, retain source/license/hash, inspect silhouette, continuous anatomy, pose, joint edge flow, UV and density. Then progress through the user-approved order. No new binding or animation before the body/clothing stages are accepted.
+
+## 2026-10-12 — M5.2.9.6.7 low-cost video-to-motion research
+
+Question: can video supply reusable motion more cheaply than manually authoring each joint? Yes, markerless motion capture / human motion recovery is an established approach. Local feasibility and total cleanup cost remain untested on this workstation.
+
+| Candidate | Verified capability | Role and limitation |
+| --- | --- | --- |
+| MediaPipe Pose Landmarker | Local image/video/live processing; estimates 33 3D landmarks; optimized for on-device real-time use | Lightweight tracking baseline. Not a ready-made full skeletal animation exporter; orientation, twist, root motion and foot contacts require additional solving. |
+| FreeMoCap | Open-source markerless capture with ordinary cameras and Blender integration | Practical local multi-camera candidate. Official requirements say one camera does not provide reliable 3D; use at least two, preferably three, with calibration. Setup/synchronization and cleanup add work. |
+| GVHMR | Official local video inference, including a static-camera option | Relevant single-camera 3D motion-recovery research. Official license restricts use to educational/research/non-profit purposes; commercial use requires contacting the author. Not selected for the asset-sale pipeline. Windows/RTX 5060 Laptop 8GB performance and dependencies remain unverified. |
+
+Sources checked 2026-10-12:
+- MediaPipe capabilities and model variants: https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker
+- FreeMoCap hardware/3D requirements: https://docs.freemocap.org/documentation/software-hardware-prerequisites.html
+- FreeMoCap capture setup: https://docs.freemocap.org/documentation/single-camera-recording.html
+- FreeMoCap source/software license (AGPL-3.0): https://github.com/freemocap/freemocap
+- GVHMR inference: https://github.com/zju3dv/GVHMR
+- GVHMR installation: https://github.com/zju3dv/GVHMR/blob/main/docs/INSTALL.md
+- GVHMR commercial-use restriction: https://github.com/zju3dv/GVHMR/blob/main/LICENSE
+
+Do not infer model/dependency or output-asset rights from a software license alone. Do not treat training GPU counts as inference requirements, or estimated world-coordinate landmarks as exact ground-truth capture.
+
+Recommendation: use the existing licensed action library for common motions; explore video capture for distinctive motions. A single-camera clip has the lowest acquisition barrier but potentially greater reconstruction/cleanup cost. Multi-camera FreeMoCap is the stronger local candidate when reliable 3D matters and camera setup is acceptable. No new package/model installation, capture, benchmark or asset replacement occurred in this research slice. Exact tooling is not yet selected.
+
+Acceptance for a future short pilot: recognizable action on the approved body; stable planted feet; no unexplained flips or large jitter; meaningful torso/hip coordination; inspectable baked animation; Godot playback matching Blender. Record actual human/agent cleanup time, not only inference speed. Keep original video and source motion separate from retargeted clips.

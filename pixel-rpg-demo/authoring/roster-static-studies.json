@@ -1,0 +1,122 @@
+{
+  "neris-back": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-back-cuffs-777008.png",
+    "palette_extension": [[65,43,49],[91,52,63],[123,65,79],[154,90,104],[184,124,135],[49,47,43],[78,74,65],[112,106,91]],
+    "compare_to": "neris",
+    "status": "rear static study; closed coat, buns and heels; short cuffs and visible left hand restored; sleeve-edge polish, camera and garment proportions need review; no animation"
+  },
+  "neris": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-keys-777006.png",
+    "palette_extension": [[65,43,49],[91,52,63],[123,65,79],[154,90,104],[184,124,135],[49,47,43],[78,74,65],[112,106,91]],
+    "compare_to": "mira",
+    "status": "elf steward front study; belt keys restored; oversized chest ornament and tassel removed; key-tooth clarity and camera need review; no other directions or animation"
+  },
+  "tovin-side": {
+    "source": "production/pixel-rpg/model-wave-01/guided/tovin-side-bag-776024.png",
+    "palette_extension": [[70,79,49],[101,115,72],[132,145,95],[166,174,122],[198,202,154],[91,75,46],[127,105,65],[159,139,90],[187,168,118],[219,201,155]],
+    "figure_height": 100,
+    "compare_to": "tovin",
+    "status": "right profile static study; ledger bag restored; cheek marking and green neck clasp removed, tapered trouser silhouette replaces high cuffs; folded collar and brown shoulder strap restored, gold back trim removed; narrow eye and mature cheek folds added; eye shape, hem shading and strap continuity need review; no animation"
+  },
+  "tovin-back": {
+    "source": "production/pixel-rpg/model-wave-01/guided/tovin-back-clean-776010.png",
+    "palette_extension": [[70,79,49],[101,115,72],[132,145,95],[166,174,122],[198,202,154],[91,75,46],[127,105,65],[159,139,90],[187,168,118],[219,201,155]],
+    "figure_height": 100,
+    "compare_to": "tovin",
+    "status": "rear static study; closed waistcoat, back hair and satchel panel; stray right hip strap removed; hair length and camera need review; no animation"
+  },
+  "tovin": {
+    "source": "production/pixel-rpg/model-wave-01/guided/tovin-refined-776005.png",
+    "palette_extension": [[70,79,49],[101,115,72],[132,145,95],[166,174,122],[198,202,154],[91,75,46],[127,105,65],[159,139,90],[187,168,118],[219,201,155]],
+    "figure_height": 100,
+    "compare_to": "osric",
+    "status": "goblin merchant front study; belly widened and mature face strengthened; eye readability and camera need refinement; no animation"
+  },
+  "mira": {
+    "source": "production/pixel-rpg/model-wave-01/guided/mira-herbs-774002.png",
+    "palette_extension": [[69,78,48],[91,105,67],[124,139,91],[156,166,117],[188,186,151],[217,210,181],[239,230,202]],
+    "status": "front static review; herb bundle added; hand clarity, camera and motion incomplete"
+  },
+  "mira-back": {
+    "source": "production/pixel-rpg/model-wave-01/guided/mira-sleeves-774004.png",
+    "palette_extension": [[69,78,48],[91,105,67],[124,139,91],[156,166,117],[188,186,151],[217,210,181],[239,230,202]],
+    "compare_to": "mira",
+    "status": "rear static review; sage rolled sleeves restored; tail-tip and proportions need review; no animation"
+  },
+  "mira-side": {
+    "source": "production/pixel-rpg/model-wave-01/guided/mira-details-774021.png",
+    "palette_extension": [[69,78,48],[91,105,67],[124,139,91],[156,166,117],[188,186,151],[217,210,181],[239,230,202]],
+    "compare_to": "mira",
+    "status": "profile static review; sage collar restored and human ear covered; neck bow and boot ornament removed; head depth broadened; ponytail transition tapered; pouch moved under hanging hand; arm seam blended and brown pouch restored; boot volume, tail silhouette and rendering style need review; no animation"
+  },
+  "mira-side-locks": {
+    "source": "production/pixel-rpg/model-wave-01/guided/mira-details-774024.png",
+    "palette_extension": [[69,78,48],[91,105,67],[124,139,91],[156,166,117],[188,186,151],[217,210,181],[239,230,202]],
+    "compare_to": "mira",
+    "status": "Hair-lock shadow comparison only; not promoted"
+  },
+  "osric": {
+    "source": "production/pixel-rpg/model-wave-01/guided/osric-sword-775003.png",
+    "palette_extension": [[79,82,78],[114,116,105],[158,160,147],[199,200,186],[225,224,210]],
+    "status": "elderly front static study; sword and scabbard separated with suspension strap; hands/camera and carry angle need review; no animation"
+  },
+  "osric-back": {
+    "source": "production/pixel-rpg/model-wave-01/guided/osric-back-775004.png",
+    "palette_extension": [[79,82,78],[114,116,105],[158,160,147],[199,200,186],[225,224,210]],
+    "compare_to": "osric",
+    "status": "rear static review; sword guard, cloak length and shading consistency need review; no animation"
+  },
+  "osric-side-sword": {
+    "source": "production/pixel-rpg/model-wave-01/guided/osric-side-clean-775017.png",
+    "palette_extension": [[79,82,78],[114,116,105],[158,160,147],[199,200,186],[225,224,210]],
+    "compare_to": "osric-side",
+    "body_scale": {"split_y": 260, "factor": 0.6},
+    "status": "sword repair study selected for current side; hip cloth rebuilt and suspension strap added; camera/art approval pending"
+  },
+  "osric-side": {
+    "source": "production/pixel-rpg/model-wave-01/guided/osric-side-clean-775017.png",
+    "palette_extension": [[79,82,78],[114,116,105],[158,160,147],[199,200,186],[225,224,210]],
+    "compare_to": "osric",
+    "body_scale": {
+      "split_y": 260,
+      "factor": 0.6
+    },
+    "status": "single-head side static review; normalized body length; rolled sleeve restored; elbow marks and vertical boot laces removed; vertical brown/brass sword and hip cloth reconstructed; boot silhouette and camera need review; no animation"
+  },
+  "neris-side": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-profile-777018.png",
+    "palette_extension": [[65, 43, 49], [91, 52, 63], [123, 65, 79], [154, 90, 104], [184, 124, 135], [49, 47, 43], [78, 74, 65], [112, 106, 91]],
+    "compare_to": "neris",
+    "status": "Unapproved right-facing static study; far eye removed and hanging keys restored; head and neck rebuilt together, broader profile and short collar; face shading, bun detail, collar color and projection need review; no animation"
+  },
+  "neris-NE": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-NE-777022.png",
+    "palette_extension": [[65, 43, 49], [91, 52, 63], [123, 65, 79], [154, 90, 104], [184, 124, 135], [49, 47, 43], [78, 74, 65], [112, 106, 91]],
+    "compare_to": "neris",
+    "status": "Unapproved northeast static study; coherent oblique back panel and diagonal shoes; neck seam, flat shading, bun shape and belt panels need refinement; no movement"
+  },
+  "neris-SE": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-SE-details-777026.png",
+    "palette_extension": [[65, 43, 49], [91, 52, 63], [123, 65, 79], [154, 90, 104], [184, 124, 135], [49, 47, 43], [78, 74, 65], [112, 106, 91]],
+    "compare_to": "neris",
+    "status": "Unapproved southeast static study; oblique front coat, low bun and hip keys; wine cloth hue restored; brass buttons, hand details and camera need refinement; no movement"
+  },
+  "neris-W": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-W-details-777031.png",
+    "palette_extension": [[65, 43, 49], [91, 52, 63], [123, 65, 79], [154, 90, 104], [184, 124, 135], [49, 47, 43], [78, 74, 65], [112, 106, 91]],
+    "compare_to": "neris",
+    "status": "Unapproved west static study; independent redraw from reflected guide with hidden far-side keys; invented pouch removed, bare hand restored; cloth shading, collar, buttons and projection need review; no movement"
+  },
+  "neris-SW": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-SW-777032.png",
+    "palette_extension": [[65, 43, 49], [91, 52, 63], [123, 65, 79], [154, 90, 104], [184, 124, 135], [49, 47, 43], [78, 74, 65], [112, 106, 91]],
+    "compare_to": "neris",
+    "status": "Unapproved SW static study; independent redraw; far-side keys occluded; face expression, sleeve volume, shading and projection pending; no movement"
+  },
+  "neris-NW": {
+    "source": "production/pixel-rpg/model-wave-01/guided/neris-NW-777033.png",
+    "palette_extension": [[65, 43, 49], [91, 52, 63], [123, 65, 79], [154, 90, 104], [184, 124, 135], [49, 47, 43], [78, 74, 65], [112, 106, 91]],
+    "compare_to": "neris",
+    "status": "Unapproved NW static study; independent redraw; near-side keys visible; bun shapes, neck, key teeth and shading pending; no movement"
+  }
+}

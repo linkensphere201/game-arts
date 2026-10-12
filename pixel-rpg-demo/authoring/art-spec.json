@@ -1,0 +1,23 @@
+{
+  "product": "Mosslight Journey",
+  "milestone": "M5",
+  "projection": "orthographic three-quarter top-down",
+  "tile_size": [32,32],
+  "character_cell": [48,64],
+  "feet_anchor": [24,56],
+  "directions": ["S","SE","E","NE","N","NW","W","SW"],
+  "idle": {"frames":4,"fps":4},
+  "walk": {"frames":6,"fps":8},
+  "palette": {
+    "outline":"#252737","deep":"#343a4e","skin_shadow":"#af6a57","skin":"#e2a478","skin_light":"#f4c69b",
+    "hair_dark":"#50373c","hair":"#815044","hair_light":"#b77650","teal_dark":"#234c55","teal":"#327d80","teal_light":"#64b6ac",
+    "gold_dark":"#986044","gold":"#d6a052","gold_light":"#f2d183","cream_dark":"#a39a83","cream":"#ded6ae","cream_light":"#fff0c9",
+    "leather_dark":"#483c40","leather":"#765343","leather_light":"#a27a50","white":"#fff7df",
+    "grass_dark":"#365b46","grass":"#658d50","grass_light":"#94ad65","earth_dark":"#715745","earth":"#a27e57","earth_light":"#c6a374",
+    "stone_dark":"#535765","stone":"#838984","stone_light":"#b8b9a3","water_dark":"#315d78","water":"#4d98ab"
+  },
+  "protagonist": {"id":"hero_wayfarer","name":"Rowan","features":["auburn hair","teal coat","ochre scarf","cream trousers","brown boots","left-hip satchel"]},
+  "props": ["oak_tree","shrub","rock","wooden_crate","barrel","chest","signpost","wooden_fence","bench","well","lantern","flower_patch"],
+  "provenance": "Original local authored assets. Local DreamShaper images are design exploration only; final pixel animation is separately authored.",
+  "stage": "approved M5 sample specification; visual acceptance pending"
+}

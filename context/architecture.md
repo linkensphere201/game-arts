@@ -187,3 +187,107 @@ Approve layout before detailed modeling; approve one complete imported module be
 - [LightmapGI and UV2](https://docs.godotengine.org/en/stable/tutorials/3d/global_illumination/using_lightmap_gi.html)
 
 This plan synthesizes documented editor capabilities into a project-specific manual workflow. No claim of tested local 3D performance, finished art quality or a completed scene is made.
+
+## Two-route asset quality contract (2026-10-06, M3.6.4)
+
+| Layer | Realistic route | Cartoon route |
+|---|---|---|
+| Geometry | Natural silhouette, structural breaks and meaningful large relief | Deliberate silhouette and simplified but finished forms |
+| Surface color | Mineral/bark variation, wear, dirt and appropriate scale | Designed palette, painted details and controlled variation |
+| Surface response | Normal/bump, roughness and physically plausible reflection as needed | Selective normal/roughness or stylized shading supporting the design |
+| Scene integration | Contact, wetness and consistent lighting | Consistent palette, shading and detail language |
+
+Both routes require richer authored surface detail than the current flat-color coastal prototype. Select texture resolution and polygon budgets based on viewing distance and profiling; do not prescribe every map for every object. Extra faces improve silhouettes and actual relief, while normal maps change shading without replacing missing silhouettes. Start future rock work with geometry-only and fully surfaced comparisons, then evaluate the chosen route before extending it to trees or the whole kit. Current trees/rocks remain a prototype, not accepted final art.
+
+Technical reference: [Godot material channels](https://docs.godotengine.org/en/stable/tutorials/3d/standard_material_3d.html), checked 2026-10-06.
+
+## Vegetation and ground production plan (2026-10-06, M3.8.1)
+
+Scope: inspect current assets and define the next independent samples. This record does not claim completed replacement assets. Realistic and cartoon routes both require finished geometry/surface detail; cartoon is art direction, not a cheaper unfinished model. Reuse topology/UVs where appropriate, but allow deliberately different crown silhouettes or texture art when styling requires them. A color filter alone does not guarantee a successful cartoon direction.
+
+### Observed local baseline
+
+- Tree GLB: no embedded images, five plain material slots. Crown is opaque intersecting icosphere lobes, not leaf structure. Existing UVs come from primitives, not a designed bark/foliage atlas.
+- Grass GLB: no images; every UV0 U coordinate is zero. V was used as a height channel. It cannot carry a two-dimensional blade texture without new UVs. Height-based root anchoring is now fixed and must remain independent of texture UV.
+- Terrain GLB: no images; one 0-1 UV rectangle covers 40 x 36 m. Current shader modulates painted vertex colors with noise and wetness; no layered terrain texture set exists.
+- Existing prop.gd sets one material override recursively. Do not reuse this unchanged for a tree with separate bark/leaf materials: it would replace every surface with the same material.
+- Existing grass uses spatial MultiMesh batches and no cast shadows. Current distance controls are not an authored LOD collection and short prior runs did not prove a material performance gain.
+
+### Ground: make a reusable surface system
+
+Start with a 4 x 4 m test patch and three surface layers: grass-covered soil, exposed soil/path, sand. Produce seamless albedo, normal and roughness maps at an initial 1K per layer, with a defined repeat size in meters. This is a starting budget, not a hardware guarantee. A single 1K map stretched across 40 m supplies only about 25.6 texels per meter; tiled maps retain close-range detail.
+
+Use explicit normalized layer weights (control texture or newly authored vertex channels), separate from artistic color tint. Existing terrain COLOR stores final palette colors and cannot simply be reinterpreted as soil/sand/grass weights. Blend normals in a consistent tangent frame and renormalize; test grazing-light seams. Begin with ordinary mapped tiling on the gentle terrain; use triplanar only if steep areas need it and validate normal orientation. Break visible repetition with broad tint/macro variation, not by arbitrarily rotating tangent normal samples incorrectly. Wet sand alters color and roughness together. Geometry supplies real slope/large rut shape; normal maps supply small grains.
+
+Realistic route: natural grain, soil clods, sparse dried plant matter, restrained dampness. Cartoon route: designed color groupings and simplified but authored soil/grain marks, coherent normal strength and roughness. Do not bake directional sunlight into base color. Deliver material layers, sample mesh, blending shader and parameter explanation; a ground material library is portable while this coast's terrain shape remains scene-specific.
+
+### Grass: replace the blade mesh/UV contract before adding maps
+
+Make three small clumps (short, medium, sparse/dry accent). Give each blade a bendable segmented strip, tapered shape, full-width UVs, varied height and lean. Start with opaque geometry for near-view blades to avoid unnecessary transparency; for denser mid-distance clumps compare compact alpha-cutout cards rather than assuming either approach is always faster. Map authored vein, color gradient and dry-tip detail onto a shared atlas. Realistic/cartoon maps may differ while preserving blade structure.
+
+Store normalized per-blade bend weight explicitly in a documented auxiliary channel, separate from texture UV and per-instance color. Zero weight at every attachment/root vertex; increasing toward tips. Do not reuse the current 0.55 m normalization unchanged for all future heights. Keep root anchoring and add clustered gust/phase variation; normals must remain plausible under deformation. No requirement for physical simulation or player interaction in the first sample.
+
+Place clumps in irregular patches with short/tall transitions, sparse margins and exposed ground; color roots to agree with the ground layer. Use shared geometry/materials and spatial MultiMesh chunks, then validate visibility transitions and cost. Individual blades need no collision. Evaluate near shadows and cutout overdraw at actual camera height before selecting defaults.
+
+### Tree: structure, bark and leaf clusters are separate tasks
+
+Produce one 4-6 m coastal broadleaf sample with visible root flare, tapered trunk, nonuniform branching and deliberate gaps in the crown. Preserve editable trunk/branch/leaf components. Build usable bark UVs along branches and a seamless bark color/normal/roughness set, initially 1K; inspect stretching, junctions and trunk closeups before increasing resolution.
+
+For the first detailed canopy, author small leafy twigs/clusters and render/bake a tightly packed transparent foliage atlas with real leaf outlines and interior detail. Assemble those clusters around the branch structure using several orientations; avoid a few intersecting rectangles or solid balls. Use cutout foliage with mipmap/edge/shadow testing; evaluate backface shading and modest transmission in backlight. Thin-leaf lighting is distinct from ordinary opaque rock shading. A cartoon version may use more intentional leaf group shapes and textures, while retaining twig/crown depth and gaps.
+
+Bind bark and foliage materials separately by surface/node name; do not apply the stone's one-material recursive override. Expose wind controls with stable trunk base and weighted small-branch/leaf motion. Simple trunk collision should follow the visible main stem; foliage needs no collision. Start with one near model and one deliberately reduced distant representation, then compare transitions. Automatic mesh simplification alone may damage thin leaf cards/crown density, so inspect the canopy rather than relying only on triangle counts.
+
+### Ordered samples and acceptance
+
+1. M3.8.2: 4 x 4 m ground patch, three layer materials, realistic/cartoon surface choices. Verify seamless tiling, layer edges, texture scale and normal response under moving/grazing light.
+2. M3.8.3: three grass clumps on that patch. Verify full UVs, fixed roots at multiple phases, varied silhouettes, consistent root-ground color and near/distant transitions.
+3. M3.8.4: one tree with separate bark/foliage materials, independent preview and a reduced distant representation. Verify all-around silhouette, trunk junctions, cutout edges/backlight, rooted wind and matching collision.
+4. M3.8.5: only after sample review, test the small combined patch and fresh-copy asset packages. Use the same camera path, duration, resolution, light and device for before/after CPU/GPU/frame-time comparisons; record draw calls and transparency cost. Do not claim optimization from a different view or shorter run. Full-coast replacement is a separate integration step.
+
+Proposed portable package boundaries: ground_asset/, grass_asset/, tree_asset/. Each owns its runtime dependencies, realistic/cartoon material variants and guide; lighting/cameras/old models belong to the demo. Supply editable source, GLB where applicable, texture maps, supported-engine record, provenance and observed limits. Derive textures locally by deliberate authoring/baking; do not introduce an external AI service requirement. Downloaded/scan material sources would require an explicit provenance/redistribution check before inclusion.
+
+### Official references checked 2026-10-06
+
+- [Godot material documentation](https://docs.godotengine.org/en/stable/tutorials/3d/standard_material_3d.html): surface channels, foliage cutouts and alpha-edge antialiasing. Cutouts are a supported foliage option, not a claim of performance in this proposed scene.
+- [MultiMesh optimization](https://docs.godotengine.org/en/stable/tutorials/performance/using_multimesh.html): instances are culled as a group; spatial batches help. Page is marked not yet updated for 4.7, so validate behavior locally.
+- [Mesh LOD](https://docs.godotengine.org/en/stable/tutorials/3d/mesh_lod.html) and [visibility ranges](https://docs.godotengine.org/en/stable/tutorials/3d/visibility_ranges.html): distinguish mesh simplification from switching whole representations.
+- [Spatial shader reference](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html): deformation/material inputs. These APIs support the implementation; they do not establish art quality or measured cost.
+
+## 2026-10-07: Pixel JRPG pack product brief (M5-M9, proposed)
+
+### User-confirmed objective
+
+Start a separate rapid-output product: a cohesive Japanese-style pixel RPG game-art collection with a 2.5D overhead view, broad character/prop/item/environment coverage, multidirectional character movement, and a single viewing angle for non-character assets. High completion and practical game coverage matter more than file counts. Earlier screenshot examples establish the product category, not permission to copy recognizable characters or artwork. Existing Godot 3D deliverables remain intact. The older pre-rendered-3D-to-2D experiment remains deferred; this request does not require that production method.
+
+### Proposed first edition (scope awaiting approval)
+
+An original small fantasy-adventure world supporting village -> wilderness -> dungeon -> return/reward. It is an asset pack with a Godot demonstration, not a full commercial RPG. Local asset production/inference remains the default constraint. No cloud image generation or new model downloads are implied. User confirmed square-grid orthographic three-quarter top-down (not diamond isometric) and eight-direction character movement on 2026-10-07. Native tiles 32 x 32 pixels; humanoid frame canvas 48 x 64 pixels; icons 32 x 32; pixel-perfect nearest sampling and consistent feet anchors. Larger objects span tile multiples with specified pivots/occlusion regions.
+
+Proposed distinct designs (animation frames, mirrored exports, recolors and tile edge combinations do not count as extra designs):
+- 12 humanoids: four adventurer roles (fighter, mage, ranger, healer) and eight villagers (merchant, blacksmith, innkeeper, farmer, guard, elder, child, scholar). Designs are original and share scale/style.
+- Eight enemies across woodland/cave/ruin themes; four ambient animals. All 24 characters are proposed to have eight-direction idle (4 frames) and walk (6 frames): 1,920 frame slots before extra actions. Eight directions are user-confirmed; character and frame counts remain proposed. These are planning counts, not produced assets.
+- For a small turn-based demonstration: the four adventurers and eight enemies also receive a single battle-facing attack/cast, hurt and defeat set. No universal directional real-time combat or equip-every-item animation system is included in this first edition.
+- Five environment kits: village exterior, building interior, meadow/forest, cave, ancient ruins. Supply functional tile transitions, corners, collision/occlusion annotations, doors and entry links. Water/shore belongs to outdoor coverage.
+- 64 placeable props covering buildings/architectural components, furniture/workstations, containers/signage, vegetation/rocks and dungeon mechanisms. Building modules and small props are cataloged separately; recolors are optional extras.
+- 96 inventory icons: 24 equipment, 16 consumables, 24 crafting/gathering materials, 16 quest/key objects and 16 currency/loot/food objects.
+- 32 reusable UI elements: panels, dialogue/name boxes, buttons/states, cursor, slots, tabs, bars, status symbols and prompts, sufficient for inventory/shop/dialogue/basic combat screens. Do not count every sliced panel piece as a separate design.
+- 12 short effects (hit, slash, heal, cast, fire, ice, poison, pickup, level-up, smoke, sparkle, teleport).
+- 12 simple matching humanoid dialogue portraits.
+- Three connected showcase maps: village/interior, forest approach and cave/ruin dungeon, demonstrating the five environment kits and the typical exploration/interaction/reward loop.
+
+Non-character assets use a single camera angle. Static objects receive one finished image rather than arbitrary motion; only interactive/living elements need short single-angle animations (doors/chests opening, torch/fire, water, flags, mechanisms, effects). Clarify if the user literally requires animation on every object.
+
+### Delivery and acceptance
+
+- Transparent PNGs, character sheets and separate frames, tilesets, icon/UI sheets, effects, editable authoring sources and a machine-readable catalog with stable asset IDs, dimensions, pivots, animation clips/FPS, tags and provenance.
+- Portable Godot 4 resources: configured SpriteFrames, terrain/tile setup, collision and Y-sorting examples, plus a runnable demonstration and source. Universal images remain engine-independent; Unity-specific implementation remains deferred.
+- Consistent palette, light direction, pixel density and outline treatment across all categories; no blurred downscaled illustrations passed off as finished pixel art.
+- Character directions preserve identity, clothing and equipment; asymmetric details cannot be blindly mirrored. Animated limbs change poses; translating/rotating a static picture is not accepted as a walking cycle.
+- Verify loops and foot sliding in motion, frame clipping/anchors/transparency, terrain transitions and prop sorting, scene links/interactions, UI readability, fresh-project import and Windows runtime.
+- A coverage matrix links every promised category to catalog entries and a visible demo use. Report missing categories explicitly; hundreds of exported frames do not establish broad game coverage.
+- Art approval of the first representative slice precedes batch expansion. Existing sprite/3D prototypes are technical references only, not automatic visual baselines for this pack.
+- Generated assets/builds/screenshots remain local, with source/docs-only commits and no automatic push. Working locations proposed: pixel-rpg-demo/, art-source/pixel-rpg/, production/pixel-rpg/, validation/pixel-rpg/, builds/pixel-rpg-*.
+
+### Ordered plan, not yet implementation approval
+
+M5 locks the art/technical contract through one protagonist, eight-direction movement, a small grass/path tile sample, 12 props and one Godot room. M6 expands and validates characters/portraits/action loops. M7 builds terrain/environment kits, remaining props and map connections. M8 completes inventory/UI/effects and cross-category coverage. M9 performs integrated art/animation/import/runtime review, packaging, installation instructions and truthful showcase capture. No completion-time promise is made before measuring the first slice.

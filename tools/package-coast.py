@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 archive = ROOT / "builds/sunward-coast-source.zip"
 archive.parent.mkdir(exist_ok=True)
 files = []
-for folder in ("scene-demo", "art-source/environment", "validation/coast"):
+for folder in ("scene-demo", "art-source/environment", "validation/coast", "validation/coast-polish"):
     for path in sorted((ROOT / folder).rglob("*")):
         if not path.is_file():
             continue

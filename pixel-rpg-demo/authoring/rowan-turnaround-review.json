@@ -1,0 +1,231 @@
+{
+  "task": "M5.2.7",
+  "selected_gameplay_directions": {},
+  "reviewer": "assistant visual inspection; no user acceptance",
+  "records": [
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-753001.png",
+      "direction": "N",
+      "status": "reject",
+      "reason": "Longer realistic body, dark hair and changed costume."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-753002.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Changed hair/costume/body; not the same design."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-753003.png",
+      "direction": "N",
+      "status": "reject",
+      "reason": "Spiky hair and rough drawing diverge from reference."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-layout-753004.png",
+      "direction": "N",
+      "status": "superseded",
+      "reason": "Rear cape established but lower garment and boot fronts were retained; user rejected."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-753005.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Stayed frontal despite side prompt."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-garment-753006.png",
+      "direction": "N",
+      "status": "study",
+      "reason": "Rear garment structure improved, but drawing detail remains flat."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-garment-753007.png",
+      "direction": "N",
+      "status": "study",
+      "reason": "Current low-resolution rear garment comparison; not final art."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-detail-754001.png",
+      "direction": "N",
+      "status": "study",
+      "reason": "512x768 rear study improves hair/cloth; stray mark beside boot and style/detail mismatch remain."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-layout-754002.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Correct profile but ponytail, sleeves and long-body proportions violate design."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-layout-754003.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Bob/profile preserved but chain-like leg artifact, flat drawing and costume mismatch."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-layout-754004.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Bob/profile preserved but added long object, wrist ornament and rendered hair diverge from source."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-reference-754010.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Reference adapter improves costume/rendering similarity; head still looks toward viewer, proportions and camera not accepted."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-reference-754011.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Higher reference weight produced a duplicate head."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-reference-754012.png",
+      "direction": "N",
+      "status": "study",
+      "reason": "Hair and cloth shading improved, rear cape and heel view retained, but front-like boot flaps reappear; not accepted."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-back-masked-754012.png",
+      "direction": "N",
+      "status": "study",
+      "reason": "Controlled upper-reference mask removes front boot flaps while preserving hair/cape drawing. Rear clothing subcheck passes visual inspection; camera, proportions and final pixel cleanup remain open."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-torso-754011.png",
+      "direction": "E",
+      "status": "reject",
+      "reason": "Torso mask does not repair malformed head/hair in this seed."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-torso-754010.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Strict profile; hair, bracer and cape length still differ. Extra trailing negative-prompt separator found during comparison."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-torso-control-754010.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Exact prompt/control repeat retains strict profile; hair, bracer and cape length still need identity cleanup."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-bracer-755001.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Removed invented circular bracer ornament; outside mask preserved exactly."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-hair-755002.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Shortened rear bob tips while preserving face and body outside mask."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-cape-755003.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Extended tapered cape tail to closer front/rear length; current side pose-study source, not final overhead sprite approval."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-756001.png",
+      "direction": "NE",
+      "status": "reject",
+      "reason": "Rear-quarter cape and heel direction are readable, but invented topknot and wrist detail break identity."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-756002.png",
+      "direction": "NE",
+      "status": "reject",
+      "reason": "Lower denoise retains overly flat construction strokes and an unwanted neck fragment."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-756003.png",
+      "direction": "NE",
+      "status": "reject",
+      "reason": "Updated guide still produces tied/spiky hair, added sleeve and brown marks on cape."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-hair-756004.png",
+      "direction": "NE",
+      "status": "study",
+      "reason": "Bounded local repair removes topknot with pixel-exact preservation outside mask. Rear-quarter torso/boot study only; head yaw remains too close to N, neck join and cape/arm identity need cleanup; camera and final pixels unapproved."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-cape-756005.png",
+      "direction": "NE",
+      "status": "study",
+      "reason": "Widened teal-only cape projection toward the rear view, preserving limbs outside edit mask. Neck gap and old cape-edge residue remain."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-heading-756006.png",
+      "direction": "NE",
+      "status": "reject",
+      "reason": "Head-region redraw invents a visible face looking back and a white collar; wrong directional behavior."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-nape-756007.png",
+      "direction": "NE",
+      "status": "study",
+      "reason": "Narrow nape/ear edit avoids the invented face and reconnects neck; current NE static source. Camera, proportions, collar remnant and cape-edge cleanup remain open."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-side-shoulder-755004.png",
+      "direction": "E",
+      "status": "study",
+      "reason": "Exposed shoulder and teal upper-arm wrap now match front costume more closely; head and lower costume unchanged. Used by side motion revision 3; full art/camera gate remains open."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-SE-757001.png",
+      "direction": "SE",
+      "status": "reject",
+      "reason": "Illustration-derived warp stays essentially frontal; changes hair length and clasp."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-SE-757002.png",
+      "direction": "SE",
+      "status": "reject",
+      "reason": "Higher denoise and torso reference still do not establish right-front orientation; extra belt details."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-SE-757003.png",
+      "direction": "SE",
+      "status": "study",
+      "reason": "Explicit anatomy/garment guide yields right-front head, torso and boot orientation. Current SE static study, with invented belt pendant and rough cape edge; camera/pixel polish and costume cleanup still open."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-SE-belt-757004.png",
+      "direction": "SE",
+      "status": "study",
+      "reason": "Removed invented pendant below belt; model source orientation preserved."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-SE-cape-757005.png",
+      "direction": "SE",
+      "status": "study",
+      "reason": "Removed ragged left cape edge and long brown strip with bounded local repair. Current SE study; upper patch join and inner cape residue remain, final art gate open."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-N-shoulders-758001.png",
+      "direction": "N",
+      "status": "study",
+      "reason": "Bounded local-model repair exposes both rear shoulder caps to match the original off-shoulder costume. Outside mask unchanged (edits bounded by y239..321); lower cape and legs preserved. Current N source; neckline and cross-view silhouette remain art review items."
+    },
+    {
+      "source": "production/pixel-rpg/model-wave-01/guided/rowan-NE-shoulder-758002.png",
+      "direction": "NE",
+      "status": "study",
+      "reason": "Local masked shoulder correction exposes near shoulder above teal band and removes white collar segment. Outside-mask pixels unchanged; current NE study. Cape silhouette and pixel cleanup remain unapproved."
+    }
+  ],
+  "garment_checks": [
+    "front clasp only visible when facing camera",
+    "rear cape occludes front waist buckle",
+    "boots use correct toe/heel silhouette",
+    "same hair cut, shoulder exposure, bracer and dress design",
+    "same overhead projection and scale",
+    "no invented equipment or signature-like marks"
+  ]
+}
